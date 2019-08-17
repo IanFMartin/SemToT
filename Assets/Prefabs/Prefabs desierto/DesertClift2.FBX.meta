@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: 72f1d302bea8fbc4bbed6b3cef7e809c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Birth 001
+    100002: Birth 002
+    100004: Birth 003
+    100006: Birth 004
+    100008: //RootNode
+    100010: Display 001
+    100012: Display 002
+    100014: Display 003
+    100016: Display 004
+    100018: Display 005
+    100020: Display 006
+    100022: Display 007
+    100024: Display 008
+    100026: Event 001
+    100028: Event 002
+    100030: Event 003
+    100032: Event 004
+    100034: Event 005
+    100036: Event 006
+    100038: Event 007
+    100040: Event 008
+    100042: Force 001
+    100044: Force 002
+    100046: Force 003
+    100048: Force 004
+    100050: Obsidian_001
+    100052: Obsidian_001 1
+    100054: Obsidian_002
+    100056: Obsidian_004
+    100058: Position Icon 001
+    100060: Position Icon 002
+    100062: Position Object 001
+    100064: Position Object 002
+    100066: Render 001
+    100068: Render 002
+    100070: Render 003
+    100072: Render 004
+    100074: Rotation 001
+    100076: Rotation 002
+    100078: Rotation 003
+    100080: Rotation 004
+    100082: Shape Instance 001
+    100084: Shape Instance 002
+    100086: Shape Instance 003
+    100088: Shape Instance 004
+    400000: Birth 001
+    400002: Birth 002
+    400004: Birth 003
+    400006: Birth 004
+    400008: //RootNode
+    400010: Display 001
+    400012: Display 002
+    400014: Display 003
+    400016: Display 004
+    400018: Display 005
+    400020: Display 006
+    400022: Display 007
+    400024: Display 008
+    400026: Event 001
+    400028: Event 002
+    400030: Event 003
+    400032: Event 004
+    400034: Event 005
+    400036: Event 006
+    400038: Event 007
+    400040: Event 008
+    400042: Force 001
+    400044: Force 002
+    400046: Force 003
+    400048: Force 004
+    400050: Obsidian_001
+    400052: Obsidian_001 1
+    400054: Obsidian_002
+    400056: Obsidian_004
+    400058: Position Icon 001
+    400060: Position Icon 002
+    400062: Position Object 001
+    400064: Position Object 002
+    400066: Render 001
+    400068: Render 002
+    400070: Render 003
+    400072: Render 004
+    400074: Rotation 001
+    400076: Rotation 002
+    400078: Rotation 003
+    400080: Rotation 004
+    400082: Shape Instance 001
+    400084: Shape Instance 002
+    400086: Shape Instance 003
+    400088: Shape Instance 004
+    2100000: No Name
+    2300000: Obsidian_001
+    2300002: Obsidian_001 1
+    2300004: Obsidian_002
+    2300006: Obsidian_004
+    3300000: Obsidian_001
+    3300002: Obsidian_001 1
+    3300004: Obsidian_002
+    3300006: Obsidian_004
+    4300000: Obsidian_001
+    4300002: Obsidian_002
+    4300004: Obsidian_004
+    4300006: Obsidian_001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

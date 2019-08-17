@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: 775aa63c3f2202442af3581a15b1ff16
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cabeza
+    100002: CATRigLArmLMedioFalange1
+    100004: CATRigLArmLMedioFalange2
+    100006: CATRigLArmLMedioFalange3
+    100008: CATRigLArmLPalm
+    100010: CATRigLArmLPulgarFalange1
+    100012: CATRigLArmLPulgarFalange2
+    100014: CATRigLArmLPulgarFalange3
+    100016: CATRigRArmPulgarFalange1
+    100018: CATRigRArmPulgarFalange2
+    100020: CATRigRArmPulgarFalange3
+    100022: CATRigRArmRMedioFalange1
+    100024: CATRigRArmRMedioFalange2
+    100026: CATRigRArmRMedioFalange3
+    100028: CATRigRArmRPalm
+    100030: CATRigRLegAnkle
+    100032: ClaviculaLeft
+    100034: ClaviculaRight
+    100036: Cuello1
+    100038: Cuello2
+    100040: //RootNode
+    100042: LeftArm1
+    100044: LeftArm2
+    100046: LegIz
+    100048: LegRight
+    100050: LegRodillaIz
+    100052: LegRodillaRight
+    100054: LegTobilloIz
+    100056: Pelvis
+    100058: Remera
+    100060: RightArm1
+    100062: RightArm2
+    100064: Spine1
+    100066: Spine2
+    100068: Spine3
+    100070: SpineTop
+    400000: Cabeza
+    400002: CATRigLArmLMedioFalange1
+    400004: CATRigLArmLMedioFalange2
+    400006: CATRigLArmLMedioFalange3
+    400008: CATRigLArmLPalm
+    400010: CATRigLArmLPulgarFalange1
+    400012: CATRigLArmLPulgarFalange2
+    400014: CATRigLArmLPulgarFalange3
+    400016: CATRigRArmPulgarFalange1
+    400018: CATRigRArmPulgarFalange2
+    400020: CATRigRArmPulgarFalange3
+    400022: CATRigRArmRMedioFalange1
+    400024: CATRigRArmRMedioFalange2
+    400026: CATRigRArmRMedioFalange3
+    400028: CATRigRArmRPalm
+    400030: CATRigRLegAnkle
+    400032: ClaviculaLeft
+    400034: ClaviculaRight
+    400036: Cuello1
+    400038: Cuello2
+    400040: //RootNode
+    400042: LeftArm1
+    400044: LeftArm2
+    400046: LegIz
+    400048: LegRight
+    400050: LegRodillaIz
+    400052: LegRodillaRight
+    400054: LegTobilloIz
+    400056: Pelvis
+    400058: Remera
+    400060: RightArm1
+    400062: RightArm2
+    400064: Spine1
+    400066: Spine2
+    400068: Spine3
+    400070: SpineTop
+    2100000: 01 - Default
+    2100002: 03 - Default
+    2100004: 02 - Default
+    2100006: 08 - Default
+    4300000: Remera
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Remera
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 8
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.39379486
+        functionName: SecondAttack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.07434944
+        functionName: StartAttack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.78438663
+        functionName: EndAttack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

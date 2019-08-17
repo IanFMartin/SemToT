@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Nivel 0 ( entrada).unity
+    guid: 703c8aac62751684cb10ed14481bbeb2
+  - enabled: 1
+    path: Assets/Scenes/nivel 1 (bosque) rivero.unity
+    guid: 559ccc8f35791f1489e698353b289b9d
+  - enabled: 1
+    path: Assets/Scenes/nivel 2 (desierto).unity
+    guid: cc0154d7abbd52345b6933ffd5cb1f71
+  - enabled: 1
+    path: Assets/Scenes/nivel 3 (ciudad).unity
+    guid: d0be8af23a6144c4aa23a8f8669b2840
+  m_configObjects: {}

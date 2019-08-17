@@ -1,0 +1,1426 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &128917499141356705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989057}
+  m_Layer: 0
+  m_Name: GolemRigEspalda3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356705}
+  m_LocalRotation: {x: 4.3074792e-21, y: 2.5410988e-21, z: -2.842171e-14, w: 1}
+  m_LocalPosition: {x: -3.4051647, y: 4.5474735e-13, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 128917499140989089}
+  m_Father: {fileID: 128917499140989059}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989059}
+  m_Layer: 0
+  m_Name: GolemRigEspalda2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356707}
+  m_LocalRotation: {x: -1.0658137e-14, y: 8.470331e-22, z: -1.4210855e-14, w: 1}
+  m_LocalPosition: {x: -3.4051666, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 128917499140989057}
+  m_Father: {fileID: 128917499140989061}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989061}
+  m_Layer: 0
+  m_Name: GolemRigEspalda1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356709}
+  m_LocalRotation: {x: 8.027394e-21, y: -1.1850018e-14, z: -1.4210855e-14, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 128917499140989059}
+  m_Father: {fileID: 128917499140989119}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989063}
+  m_Layer: 0
+  m_Name: GolemRigCuello2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356711}
+  m_LocalRotation: {x: -1.0658138e-14, y: 2.541099e-21, z: -1.4210856e-14, w: 1}
+  m_LocalPosition: {x: -1.1229382, y: 4.5474735e-13, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children:
+  - {fileID: 128917499140989067}
+  m_Father: {fileID: 128917499140989065}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989065}
+  m_Layer: 0
+  m_Name: GolemRigCuello1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356713}
+  m_LocalRotation: {x: -1.789304e-21, y: 1.9421668e-14, z: -1.4210855e-14, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 128917499140989063}
+  m_Father: {fileID: 128917499140989089}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989067}
+  m_Layer: 0
+  m_Name: GolemRigCabeza
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356715}
+  m_LocalRotation: {x: 1.0658145e-14, y: -1.9421668e-14, z: 1.4210855e-14, w: 1}
+  m_LocalPosition: {x: -1.1229382, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 128917499140989063}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989069}
+  m_Layer: 0
+  m_Name: GolemIdle (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356717}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.13, z: 0}
+  m_LocalScale: {x: 2.322, y: 2.322, z: 2.322}
+  m_Children:
+  - {fileID: 128917499140989071}
+  - {fileID: 128917499140989119}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989071}
+  - component: {fileID: 128917499138175407}
+  m_Layer: 0
+  m_Name: Golem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356719}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.0033436993, y: 0.652025, z: 0.053278495}
+  m_LocalScale: {x: 0.0254, y: 0.0254, z: 0.0254}
+  m_Children: []
+  m_Father: {fileID: 128917499140989069}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &128917499138175407
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356719}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: de5e6aa00a05633458f524bda80924ec, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4300000, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
+  m_Bones:
+  - {fileID: 128917499140989067}
+  - {fileID: 128917499140989063}
+  - {fileID: 128917499140989065}
+  - {fileID: 128917499140989089}
+  - {fileID: 128917499140989057}
+  - {fileID: 128917499140989059}
+  - {fileID: 128917499140989119}
+  - {fileID: 128917499140989115}
+  - {fileID: 128917499140989117}
+  - {fileID: 128917499140989129}
+  - {fileID: 128917499140989061}
+  - {fileID: 128917499140989085}
+  - {fileID: 128917499140989087}
+  - {fileID: 128917499140989127}
+  - {fileID: 128917499140989099}
+  - {fileID: 128917499140989103}
+  - {fileID: 128917499140989079}
+  - {fileID: 128917499140989077}
+  - {fileID: 128917499140989073}
+  - {fileID: 128917499140989075}
+  - {fileID: 128917499140989083}
+  - {fileID: 128917499140989081}
+  - {fileID: 128917499140989101}
+  - {fileID: 128917499140989133}
+  - {fileID: 128917499140989109}
+  - {fileID: 128917499140989107}
+  - {fileID: 128917499140989135}
+  - {fileID: 128917499140989105}
+  - {fileID: 128917499140989113}
+  - {fileID: 128917499140989111}
+  - {fileID: 128917499140989131}
+  - {fileID: 128917499140989125}
+  - {fileID: 128917499140989121}
+  - {fileID: 128917499140989123}
+  - {fileID: 128917499140989095}
+  - {fileID: 128917499140989091}
+  - {fileID: 128917499140989097}
+  - {fileID: 128917499140989093}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 128917499140989119}
+  m_AABB:
+    m_Center: {x: -3.5210958, y: 0.15091324, z: -0.0015058517}
+    m_Extent: {x: 14.827375, y: 4.782197, z: 11.729121}
+  m_DirtyAABB: 0
+--- !u!1 &128917499141356721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989073}
+  m_Layer: 0
+  m_Name: GolemRigLeftArmDigit32
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356721}
+  m_LocalRotation: {x: 0.0002209983, y: -0.01150419, z: 0.019416444, w: 0.9997453}
+  m_LocalPosition: {x: -2.2832594, y: 0, z: 0.000000029802322}
+  m_LocalScale: {x: 1.0000024, y: 0.99999964, z: 0.9999967}
+  m_Children: []
+  m_Father: {fileID: 128917499140989075}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989075}
+  m_Layer: 0
+  m_Name: GolemRigLeftArmDigit31
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356723}
+  m_LocalRotation: {x: -0.00022095942, y: 0.011504252, z: -0.0194164, w: 0.9997453}
+  m_LocalPosition: {x: -1.702591, y: 0.000002861023, z: -0.310732}
+  m_LocalScale: {x: 1.0000023, y: 0.9999991, z: 0.9999966}
+  m_Children:
+  - {fileID: 128917499140989073}
+  m_Father: {fileID: 128917499140989099}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989077}
+  m_Layer: 0
+  m_Name: GolemRigLeftArmDigit22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356725}
+  m_LocalRotation: {x: 0.019214736, y: -0.002419103, z: -0.027068384, w: 0.999446}
+  m_LocalPosition: {x: -2.2791338, y: 0.00000047683716, z: 0}
+  m_LocalScale: {x: 1.0000024, y: 0.99999946, z: 0.99999666}
+  m_Children: []
+  m_Father: {fileID: 128917499140989079}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989079}
+  m_Layer: 0
+  m_Name: GolemRigLeftArmDigit21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356727}
+  m_LocalRotation: {x: 0.0045904214, y: 0.073486544, z: -0.0054890253, w: 0.9972705}
+  m_LocalPosition: {x: -1.703083, y: 0.13016987, z: 0.6258407}
+  m_LocalScale: {x: 1.0000024, y: 0.9999992, z: 0.9999964}
+  m_Children:
+  - {fileID: 128917499140989077}
+  m_Father: {fileID: 128917499140989099}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989081}
+  m_Layer: 0
+  m_Name: GolemRigLeftArmDigit12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356729}
+  m_LocalRotation: {x: -0.009671452, y: 0.0005647306, z: 0.008126606, w: 0.99992007}
+  m_LocalPosition: {x: -1.9804697, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000024, y: 0.9999995, z: 0.9999968}
+  m_Children: []
+  m_Father: {fileID: 128917499140989083}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989083}
+  m_Layer: 0
+  m_Name: GolemRigLeftArmDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356731}
+  m_LocalRotation: {x: 0.035578843, y: 0.1413592, z: 0.002200806, w: 0.9893164}
+  m_LocalPosition: {x: -0.5435009, y: 0.17156315, z: 1.4083521}
+  m_LocalScale: {x: 1.0000027, y: 0.99999917, z: 0.99999607}
+  m_Children:
+  - {fileID: 128917499140989081}
+  m_Father: {fileID: 128917499140989099}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989085}
+  m_Layer: 0
+  m_Name: GolemRigLeftArm2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356733}
+  m_LocalRotation: {x: -0.0008678684, y: 0.15853569, z: -0.0009979564, w: 0.9873524}
+  m_LocalPosition: {x: -4.6659317, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000004, y: 1.0000002, z: 0.9999999}
+  m_Children:
+  - {fileID: 128917499140989099}
+  m_Father: {fileID: 128917499140989087}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989087}
+  m_Layer: 0
+  m_Name: GolemRigLeftArm1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356735}
+  m_LocalRotation: {x: 0.0060121412, y: 0.9868314, z: 0.0005406365, w: 0.16163954}
+  m_LocalPosition: {x: 0.4540825, y: 0.0000005174543, z: 7.3977137}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 128917499140989085}
+  m_Father: {fileID: 128917499140989089}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989089}
+  m_Layer: 0
+  m_Name: GolemRigPecho
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356737}
+  m_LocalRotation: {x: 1.0658145e-14, y: -1.9421666e-14, z: 4.2632564e-14, w: 1}
+  m_LocalPosition: {x: -3.4051647, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 128917499140989065}
+  - {fileID: 128917499140989087}
+  - {fileID: 128917499140989117}
+  m_Father: {fileID: 128917499140989057}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989091}
+  m_Layer: 0
+  m_Name: GolemRigLeftLegDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356739}
+  m_LocalRotation: {x: -0.00008797024, y: 0.00014821943, z: -0.51019245, w: 0.8600603}
+  m_LocalPosition: {x: -1.7025834, y: 0.000000086620275, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 128917499140989093}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989093}
+  m_Layer: 0
+  m_Name: GolemRigLeftLegAnkle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356741}
+  m_LocalRotation: {x: 0.000030458652, y: 0.008250705, z: -0.47577497, w: 0.87952834}
+  m_LocalPosition: {x: -6.8103313, y: -0.00000047683716, z: 0.00000023841858}
+  m_LocalScale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+  m_Children:
+  - {fileID: 128917499140989091}
+  m_Father: {fileID: 128917499140989095}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989095}
+  m_Layer: 0
+  m_Name: GolemRigLeftLeg2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356743}
+  m_LocalRotation: {x: -0.000000061812045, y: 0.00000019340646, z: 0.50058514, w: 0.8656873}
+  m_LocalPosition: {x: -4.5402217, y: 0.00000047683716, z: -0.00000023841858}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 128917499140989093}
+  m_Father: {fileID: 128917499140989097}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989097}
+  m_Layer: 0
+  m_Name: GolemRigLeftLeg1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356745}
+  m_LocalRotation: {x: -0.27480826, y: 0.9614623, z: -0.0021676968, w: 0.008118841}
+  m_LocalPosition: {x: -0, y: 9.094947e-13, z: 3.5160408}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_Children:
+  - {fileID: 128917499140989095}
+  m_Father: {fileID: 128917499140989119}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989099}
+  m_Layer: 0
+  m_Name: GolemRigLeftArmPalm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356747}
+  m_LocalRotation: {x: -0.69830084, y: 0.10081931, z: 0.09457292, w: 0.70233}
+  m_LocalPosition: {x: -2.4971218, y: 0, z: -0.0000009536743}
+  m_LocalScale: {x: 1.0000024, y: 0.9999998, z: 0.9999963}
+  m_Children:
+  - {fileID: 128917499140989083}
+  - {fileID: 128917499140989079}
+  - {fileID: 128917499140989075}
+  - {fileID: 128917499140989103}
+  m_Father: {fileID: 128917499140989085}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989101}
+  m_Layer: 0
+  m_Name: GolemRigLeftArmDigit42
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356749}
+  m_LocalRotation: {x: -0.0000073545866, y: 0.03745636, z: -0.00010091437, w: 0.9992983}
+  m_LocalPosition: {x: -1.8253613, y: -0.00000047683716, z: 0.00000011920929}
+  m_LocalScale: {x: 1.0000025, y: 0.9999995, z: 0.9999966}
+  m_Children: []
+  m_Father: {fileID: 128917499140989103}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989103}
+  m_Layer: 0
+  m_Name: GolemRigLeftArmDigit41
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356751}
+  m_LocalRotation: {x: 0.006330277, y: -0.021843024, z: 0.039007187, w: 0.99898016}
+  m_LocalPosition: {x: -1.6993351, y: -0.0008740425, z: -1.2080559}
+  m_LocalScale: {x: 0.99999654, y: 0.9999993, z: 1.0000023}
+  m_Children:
+  - {fileID: 128917499140989101}
+  - {fileID: 2977725988501051643}
+  m_Father: {fileID: 128917499140989099}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989105}
+  m_Layer: 0
+  m_Name: GolemRigRightArmDigit31
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356753}
+  m_LocalRotation: {x: 0.0000014502787, y: -0.011506134, z: -0.038502004, w: 0.9991923}
+  m_LocalPosition: {x: -1.7025833, y: 0, z: 0.31073213}
+  m_LocalScale: {x: 0.99999636, y: 0.9999994, z: 1.0000023}
+  m_Children:
+  - {fileID: 128917499140989135}
+  m_Father: {fileID: 128917499140989129}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989107}
+  m_Layer: 0
+  m_Name: GolemRigRightArmDigit22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356755}
+  m_LocalRotation: {x: -0.019214638, y: 0.0024189418, z: -0.02706805, w: 0.99944603}
+  m_LocalPosition: {x: -2.2791338, y: -0.00000047683716, z: 0}
+  m_LocalScale: {x: 0.99999624, y: 0.99999934, z: 1.0000021}
+  m_Children: []
+  m_Father: {fileID: 128917499140989109}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989109}
+  m_Layer: 0
+  m_Name: GolemRigRightArmDigit21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356757}
+  m_LocalRotation: {x: -0.007944025, y: -0.07319893, z: -0.05106249, w: 0.99597764}
+  m_LocalPosition: {x: -1.7030821, y: 0.13016939, z: -0.62583995}
+  m_LocalScale: {x: 0.99999624, y: 0.9999995, z: 1.0000023}
+  m_Children:
+  - {fileID: 128917499140989107}
+  m_Father: {fileID: 128917499140989129}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989111}
+  m_Layer: 0
+  m_Name: GolemRigRightArmDigit12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356759}
+  m_LocalRotation: {x: 0.009671246, y: -0.0005647084, z: 0.008126401, w: 0.99992007}
+  m_LocalPosition: {x: -1.9804678, y: 0.0000009536743, z: 0}
+  m_LocalScale: {x: 0.9999965, y: 0.9999993, z: 1.0000025}
+  m_Children: []
+  m_Father: {fileID: 128917499140989113}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989113}
+  m_Layer: 0
+  m_Name: GolemRigRightArmDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356761}
+  m_LocalRotation: {x: -0.038598105, y: -0.14056322, z: -0.018989703, w: 0.98913676}
+  m_LocalPosition: {x: -0.5434971, y: 0.1715622, z: -1.4083508}
+  m_LocalScale: {x: 0.9999959, y: 0.99999934, z: 1.0000026}
+  m_Children:
+  - {fileID: 128917499140989111}
+  m_Father: {fileID: 128917499140989129}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989115}
+  m_Layer: 0
+  m_Name: GolemRigRightArm2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356763}
+  m_LocalRotation: {x: 0.00086787465, y: -0.1585357, z: -0.0009979547, w: 0.9873524}
+  m_LocalPosition: {x: -4.6659317, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
+  m_Children:
+  - {fileID: 128917499140989129}
+  m_Father: {fileID: 128917499140989117}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989117}
+  m_Layer: 0
+  m_Name: GolemRigRightArm1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356765}
+  m_LocalRotation: {x: 0.0060437946, y: 0.98875654, z: -0.00062137604, w: -0.1494111}
+  m_LocalPosition: {x: 0.4540825, y: 0.0000005174538, z: -7.3977137}
+  m_LocalScale: {x: 0.99999976, y: 0.9999999, z: 0.9999998}
+  m_Children:
+  - {fileID: 128917499140989115}
+  m_Father: {fileID: 128917499140989089}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989119}
+  m_Layer: 0
+  m_Name: GolemRigPelvis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356767}
+  m_LocalRotation: {x: 0.50000006, y: -0.49999994, z: -0.49999994, w: 0.50000006}
+  m_LocalPosition: {x: 1.474487e-14, y: 0.28830397, z: -0.000000046970683}
+  m_LocalScale: {x: 0.025399996, y: 0.025399996, z: 0.025399996}
+  m_Children:
+  - {fileID: 128917499140989061}
+  - {fileID: 128917499140989097}
+  - {fileID: 128917499140989127}
+  m_Father: {fileID: 128917499140989069}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989121}
+  m_Layer: 0
+  m_Name: GolemRigRightLegDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356769}
+  m_LocalRotation: {x: -0.000000049851447, y: 0.0000000035830074, z: -0.51018363,
+    w: 0.8600655}
+  m_LocalPosition: {x: -1.7025832, y: 0.000000017565071, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 0.9999998, z: 1}
+  m_Children: []
+  m_Father: {fileID: 128917499140989123}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989123}
+  m_Layer: 0
+  m_Name: GolemRigRightLegAnkle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356771}
+  m_LocalRotation: {x: -0.00011231737, y: -0.0084024435, z: -0.475784, w: 0.879522}
+  m_LocalPosition: {x: -6.810332, y: -0.00000035762787, z: 0.00000023841858}
+  m_LocalScale: {x: 1.0000005, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 128917499140989121}
+  m_Father: {fileID: 128917499140989125}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989125}
+  m_Layer: 0
+  m_Name: GolemRigRightLeg2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356773}
+  m_LocalRotation: {x: 0.00000007635829, y: -0.000000079026904, z: 0.50058526, w: 0.86568725}
+  m_LocalPosition: {x: -4.5402203, y: 0, z: -0.00000023841858}
+  m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 0.99999994}
+  m_Children:
+  - {fileID: 128917499140989123}
+  m_Father: {fileID: 128917499140989127}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989127}
+  m_Layer: 0
+  m_Name: GolemRigRightLeg1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989127
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356775}
+  m_LocalRotation: {x: -0.2748084, y: 0.9614623, z: 0.0021677322, w: -0.008118713}
+  m_LocalPosition: {x: -0, y: -4.5474735e-13, z: -3.5160408}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 0.99999994}
+  m_Children:
+  - {fileID: 128917499140989125}
+  m_Father: {fileID: 128917499140989119}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989129}
+  m_Layer: 0
+  m_Name: GolemRigRightArmPalm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356777}
+  m_LocalRotation: {x: 0.698664, y: -0.098247126, z: 0.09200958, w: 0.70267373}
+  m_LocalPosition: {x: -2.4971209, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999963, y: 0.99999917, z: 1.0000023}
+  m_Children:
+  - {fileID: 128917499140989113}
+  - {fileID: 128917499140989109}
+  - {fileID: 128917499140989105}
+  - {fileID: 128917499140989133}
+  m_Father: {fileID: 128917499140989115}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989131}
+  m_Layer: 0
+  m_Name: GolemRigRightArmDigit42
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356779}
+  m_LocalRotation: {x: 0.000007265238, y: -0.037456468, z: -0.0001008736, w: 0.9992983}
+  m_LocalPosition: {x: -1.8253613, y: 0.00000047683716, z: -0.00000011920929}
+  m_LocalScale: {x: 0.9999964, y: 0.9999993, z: 1.0000023}
+  m_Children: []
+  m_Father: {fileID: 128917499140989133}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989133}
+  m_Layer: 0
+  m_Name: GolemRigRightArmDigit41
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356781}
+  m_LocalRotation: {x: -0.0054722126, y: 0.022073466, z: -0.000032132983, w: 0.9997414}
+  m_LocalPosition: {x: -1.6993246, y: -0.0008764267, z: 1.2080549}
+  m_LocalScale: {x: 1.0000021, y: 0.9999993, z: 0.99999636}
+  m_Children:
+  - {fileID: 128917499140989131}
+  m_Father: {fileID: 128917499140989129}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &128917499141356783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128917499140989135}
+  m_Layer: 0
+  m_Name: GolemRigRightArmDigit32
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128917499140989135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128917499141356783}
+  m_LocalRotation: {x: -0.00022105359, y: 0.011504028, z: 0.0194163, w: 0.9997453}
+  m_LocalPosition: {x: -2.2832584, y: 0.0000009536743, z: 0.000000014901161}
+  m_LocalScale: {x: 0.99999636, y: 0.99999946, z: 1.0000024}
+  m_Children: []
+  m_Father: {fileID: 128917499140989105}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6219571451030538340
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 128917499140989103}
+    m_Modifications:
+    - target: {fileID: 694839158609153132, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_Name
+      value: Bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.26186258
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.3458666
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7832167
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4453941
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -17.970001
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -49.036003
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -112.49901
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 16.955275
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 16.955269
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 16.955261
+      objectReference: {fileID: 0}
+    - target: {fileID: 3556301698059466494, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: damage
+      value: 80
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b92459586d8913a4ba4b671ba719aef3, type: 3}
+--- !u!4 &2977725988501051643 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
+    type: 3}
+  m_PrefabInstance: {fileID: 6219571451030538340}
+  m_PrefabAsset: {fileID: 0}
