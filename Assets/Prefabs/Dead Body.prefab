@@ -569,7 +569,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3129064478358240881}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -578,7 +578,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e6d18612c25590f4b83375415f8af6f9, type: 2}
+  - {fileID: 2100000, guid: 517bc4dfd1dea114f93aa6a0d5afc617, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1306,6 +1306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9102529204746553801}
+  - component: {fileID: 1798641394723341464}
   m_Layer: 10
   m_Name: Dead Body
   m_TagString: Untagged
@@ -1320,11 +1321,24 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8944077551339310149}
-  m_LocalRotation: {x: 0.00020320587, y: 0.87540084, z: 0.00070437166, w: -0.48339728}
+  m_LocalRotation: {x: 0.00020079748, y: 0.87540114, z: 0.0007064539, w: -0.4833967}
   m_LocalPosition: {x: 30.55, y: 0.67, z: 26.75}
-  m_LocalScale: {x: 1.0064492, y: 1.0064492, z: 1.0064492}
+  m_LocalScale: {x: 1, y: 1.0000004, z: 1.0000011}
   m_Children:
   - {fileID: 6867616375399756116}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.082, y: 237.815, z: -0.019000001}
+--- !u!65 &1798641394723341464
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8944077551339310149}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5799616, y: 1.252496, z: 0.5951183}
+  m_Center: {x: 0.09746345, y: 0.7283603, z: -0.07988637}
