@@ -9,6 +9,11 @@ public class TalkToGuide : MonoBehaviour
     public Image interactionImg;
     public int rangeOfTalking;
     private bool _canTalk = true;
+    private DialogueManager DM;
+    private void Start()
+    {
+        DM = FindObjectOfType<DialogueManager>();
+    }
 
     void Update()
     {
@@ -26,9 +31,25 @@ public class TalkToGuide : MonoBehaviour
                     guide.Talking();
                     _canTalk = false;
                 }
+                else if (Input.GetKeyDown(KeyCode.E))
+                {
+                    if (DM.isCorrutineOn)
+                    {
+                        DM.DisplayFullSentence();
+                    }
+                    else
+                    {
+                        DM.DisplayNextSentence();
+                    }
+                }
             }
             else
+            {
                 interactionImg.gameObject.SetActive(false);
+                _canTalk = true;
+                DM.EndDialogue();
+
+            }
         }
         else
             TalkToGuideNow();

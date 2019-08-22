@@ -71,6 +71,8 @@
     <Compile Include="Assets\Scripts\ClassChangeFeedback.cs" />
     <Compile Include="Assets\Scripts\CopyHero.cs" />
     <Compile Include="Assets\Scripts\DeepDeathController.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\EffectTime.cs" />
     <Compile Include="Assets\Scripts\Enemies\AIAvoidance.cs" />
     <Compile Include="Assets\Scripts\Enemies\AIController.cs" />
