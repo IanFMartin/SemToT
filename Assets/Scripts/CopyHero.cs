@@ -9,7 +9,7 @@ public class CopyHero : MonoBehaviour, IDamageable
     public List<Transform> InvisibleWalls;
     public Canvas uiCanvas;
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, bool isCurseDmg)
     {
         Instantiate(ExplosionCurseParticle, transform.position, transform.rotation);
         foreach (var Wall in InvisibleWalls)

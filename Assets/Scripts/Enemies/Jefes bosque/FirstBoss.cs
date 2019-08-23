@@ -179,7 +179,7 @@ public class FirstBoss : Enemy, IBoss
         heal.OnEnter += () => Instantiate(healSpell, transform.position, transform.rotation);
         heal.OnUpdate += () =>
         {
-            TakeDamage(-5);
+            TakeDamage(-5, false);
             StartCoroutine(ToState(OnCondition.Idle, 4f));
         };
 
@@ -273,9 +273,9 @@ public class FirstBoss : Enemy, IBoss
         Die
     }
 
-    public override void TakeDamage(float dmg)
+    public override void TakeDamage(float dmg, bool isCurseDmg)
     {
-        base.TakeDamage(dmg);
+        base.TakeDamage(dmg, false);
         if (!alerted)
             AlertFriends();
         sight = alertedSight;

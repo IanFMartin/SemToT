@@ -64,7 +64,7 @@ public class FirstGuardian : Enemy, IBoss
             base.Attack();
     }
 
-    public override void TakeDamage(float dmg)
+    public override void TakeDamage(float dmg, bool isCurseDmg)
     {
         if (!alerted)
             AlertFriends();

@@ -83,10 +83,10 @@ public class SecondGuardian : Enemy, IBoss
                                                                 UnityEngine.Random.Range(startPosZ.position.z, endPosZ.position.z));
     }
 
-    public override void TakeDamage(float dmg)
+    public override void TakeDamage(float dmg, bool isCurseDmg)
     {
         if (!invulnerable)
-            base.TakeDamage(dmg);
+            base.TakeDamage(dmg, false);
         if (life <= 0)
         {
             Dead();

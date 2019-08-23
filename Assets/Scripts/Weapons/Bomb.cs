@@ -19,7 +19,7 @@ public class Bomb : MonoBehaviour
 
     void Update()
     {
-        transform.position += dir * speed;
+        transform.position += dir * speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,7 +35,7 @@ public class Bomb : MonoBehaviour
             }
             if (zone != null)
                 Destroy(zone);
-            other.GetComponent<IDamageable>().TakeDamage(dmg);
+            other.GetComponent<IDamageable>().TakeDamage(dmg, false);
             Instantiate(hitEffect, new Vector3(transform.position.x, 0.5f, transform.position.z), transform.rotation);
             if (!invunerableBullet)
                 Destroy(this.gameObject);
@@ -68,7 +68,7 @@ public class Bomb : MonoBehaviour
             }
             if (zone != null)
                 Destroy(zone);
-            other.gameObject.GetComponent<IDamageable>().TakeDamage(dmg);
+            other.gameObject.GetComponent<IDamageable>().TakeDamage(dmg, false);
             Instantiate(hitEffect, new Vector3(transform.position.x, 0.5f, transform.position.z), transform.rotation);
             if (!invunerableBullet)
             {

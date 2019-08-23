@@ -36,7 +36,7 @@ public class MagicBullet : Bullet
             var enemiesNear = AreaOfEffect();
             foreach (var enemy in enemiesNear)
             {
-                enemy.TakeDamage(dmg);
+                enemy.TakeDamage(dmg, false);
             }
             var magicParticle = Instantiate(hitEffect, transform.position, transform.rotation);
             StartCoroutine(ToDestroy(magicParticle.gameObject));

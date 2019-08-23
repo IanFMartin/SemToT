@@ -93,7 +93,7 @@ public class Enemy : MonoBehaviour, IDamageable
         anim.SetBool("Run", false);
     }
 
-    public virtual void TakeDamage(float dmg)
+    public virtual void TakeDamage(float dmg, bool isCurseDmg)
     {
         Instantiate(damageParticle, transform.position + Vector3.up / 2, transform.rotation);
         StartCoroutine(DamageColor());

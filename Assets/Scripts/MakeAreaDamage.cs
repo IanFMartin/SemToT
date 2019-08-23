@@ -18,7 +18,7 @@ public class MakeAreaDamage : MonoBehaviour
             if (other.GetComponent<IDamageable>() != null && other.gameObject.layer != myLayer)
             {
                 Instantiate(hitParticle, other.transform.position + Vector3.up / 3, Quaternion.identity);
-                other.GetComponent<IDamageable>().TakeDamage(dmg);
+                other.GetComponent<IDamageable>().TakeDamage(dmg, false);
                 timer = 0;
             }
         }

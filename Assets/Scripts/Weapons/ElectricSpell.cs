@@ -17,7 +17,7 @@ public class ElectricSpell : Bullet
     {
         if (other.GetComponent<IDamageable>() != null && other.gameObject.layer != myLayer)
         {
-            other.GetComponent<IDamageable>().TakeDamage(dmg);
+            other.GetComponent<IDamageable>().TakeDamage(dmg, false);
             NextJump(other.transform);
             var magicParticle = Instantiate(hitEffect, transform.position, transform.rotation);
             if (!invunerableBullet)
@@ -37,7 +37,7 @@ public class ElectricSpell : Bullet
         if (area.Any(x => x.GetComponent<IDamageable>() != null))
         {
            var next = area.Where(x => x.GetComponent<IDamageable>() != null).Skip(Random.Range(0, area.Count() - 2)).First();
-            next.GetComponent<IDamageable>().TakeDamage(dmg);
+            next.GetComponent<IDamageable>().TakeDamage(dmg, false);
             JumpsLeft--;
             NextJump(next.transform);
         }

@@ -168,7 +168,7 @@ public class SecondCityGuardian : Enemy, IBoss
             {
                 Shake.instance.shake = 0.08f;
                 Shake.instance.shakeAmount = 0.1f;
-                target.GetComponent<PlayerLife>().TakeDamage(500);
+                target.GetComponent<PlayerLife>().TakeDamage(500, false);
                 Instantiate(smoke, transform.position - Vector3.up * 1.5f, transform.rotation);
                 var exp = Instantiate(expansion, transform.position - Vector3.up * 1.5f, transform.rotation);
                 //exp.transform.Rotate(90, 0, 0);
@@ -244,9 +244,9 @@ public class SecondCityGuardian : Enemy, IBoss
 
     }
 
-    public override void TakeDamage(float dmg)
+    public override void TakeDamage(float dmg, bool isCurseDmg)
     {
-        base.TakeDamage(dmg);
+        base.TakeDamage(dmg, false);
         if (!alerted)
             AlertFriends();
         sight = alertedSight;

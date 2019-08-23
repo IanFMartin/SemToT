@@ -52,7 +52,7 @@ public class BerriesBush : ShakePlants, IDamageable
         else Summon();
     }
 
-    public override void TakeDamage(float damage)
+    public override void TakeDamage(float damage, bool isCurseDmg)
     {
         Drop();
         Leaves.Play();

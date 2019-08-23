@@ -28,6 +28,6 @@ public class CameraControl : MonoBehaviour
             else
                 transform.position = Vector3.Lerp(transform.position, expectedPosition, 0.1f);
         }
-        if (Input.GetKeyDown(KeyCode.L)) SceneManager.LoadScene(3);
+        //if (Input.GetKeyDown(KeyCode.L)) SceneManager.LoadScene(3);
     }
 }

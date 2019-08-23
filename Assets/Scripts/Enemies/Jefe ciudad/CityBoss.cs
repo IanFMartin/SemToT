@@ -283,7 +283,7 @@ public class CityBoss : Enemy, IBoss
         bomb.myLayer = 10;
     }*/
 
-    public override void TakeDamage(float dmg)
+    public override void TakeDamage(float dmg, bool isCurseDmg)
     {
         Instantiate(damageParticle, transform.position + Vector3.up / 2, transform.rotation);
         sight = alertedSight;
@@ -355,7 +355,7 @@ public class CityBoss : Enemy, IBoss
         if (inRage && collision.gameObject.layer == 12)
         {
             var player = collision.gameObject.GetComponent<PlayerLife>();
-            player.TakeDamage(800);
+            player.TakeDamage(800, false);
             fsm.Feed(OnCondition.Idle);
         }
     }

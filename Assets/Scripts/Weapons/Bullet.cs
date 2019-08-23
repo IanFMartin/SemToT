@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.GetComponent<IDamageable>() != null && other.gameObject.layer != myLayer)
         {
-            other.GetComponent<IDamageable>().TakeDamage(dmg);
+            other.GetComponent<IDamageable>().TakeDamage(dmg, false);
             Instantiate(hitEffect, transform.position, transform.rotation);
             if (!invunerableBullet)
                 Destroy(this.gameObject);

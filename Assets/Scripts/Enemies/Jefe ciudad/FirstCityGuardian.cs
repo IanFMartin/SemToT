@@ -9,7 +9,7 @@ public class FirstCityGuardian : Enemy, IBoss
     internal StateMachine<OnCondition> fsm;
     public string stateName;
 
-    public event Action<float> ITookDamage;
+    public event Action<float, bool> ITookDamage;
     public GameObject childToSpawn;
 
     public float cooldownSequence;
@@ -175,11 +175,11 @@ public class FirstCityGuardian : Enemy, IBoss
         stateName = fsm.currentState.name;
     }
 
-    public override void TakeDamage(float dmg)
+    public override void TakeDamage(float dmg, bool isCurseDmg)
     {
-        base.TakeDamage(dmg);
+        base.TakeDamage(dmg, false);
         if (ITookDamage != null)
-            ITookDamage.Invoke(dmg);
+            ITookDamage.Invoke(dmg, false);
         if (!alerted)
             AlertFriends();
         sight = alertedSight;

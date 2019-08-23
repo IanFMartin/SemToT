@@ -135,9 +135,9 @@ public class Melee : Enemy
     {
     }
 
-    public override void TakeDamage(float dmg)
+    public override void TakeDamage(float dmg, bool isCurseDmg)
     {
-        base.TakeDamage(dmg);
+        base.TakeDamage(dmg, false);
         fsm.Feed(OnCondition.Stun);
     }
 

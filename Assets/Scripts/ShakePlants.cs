@@ -14,7 +14,7 @@ public class ShakePlants : MonoBehaviour, IDamageable
 
 
 
-    public virtual void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage, bool isCurseDmg)
     {
         Leaves.Play();
         Shake();

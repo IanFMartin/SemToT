@@ -22,6 +22,9 @@ public class PlayerLife : MonoBehaviour, IDamageable
     internal bool dead;
     public GameObject damageParticle;
 
+    //delete l8er
+    bool _isPaused;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -29,14 +32,27 @@ public class PlayerLife : MonoBehaviour, IDamageable
         life = maxLife;
         lifeEvent.Invoke(life);
         initialPos = transform.position;
+
+        //delete l8er
+        _isPaused = false;
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.L))
-            Dead();
+        //if (Input.GetKey(KeyCode.L)) Dead();
 
         Curse();
+
+        //delete l8er no funca
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            _isPaused = !_isPaused;
+
+            if (_isPaused)
+                Time.timeScale = 0;
+            else
+                Time.timeScale = 1;
+        }
     }
 
     public void UpdateMaxLife(float newMax)
@@ -48,15 +64,15 @@ public class PlayerLife : MonoBehaviour, IDamageable
     private void Curse()
     {
         elapsedCurseTime += Time.deltaTime;
-        CurseClockUpdate.Invoke();
+        //CurseClockUpdate.Invoke();
         if (elapsedCurseTime >= 1)
         {
             elapsedCurseTime = 0;
             if (!dead)
-                TakeCurseDamage(curseDamage);
+                TakeDamage(curseDamage, true);
         }
     }
-
+    /*
     public void TakeCurseDamage(float dmg)
     {
         curseTime -= dmg;
@@ -67,15 +83,19 @@ public class PlayerLife : MonoBehaviour, IDamageable
         {
             Dead();
         }
-    }
+    }*/
 
-    public void TakeDamage(float dmg)
+    public void TakeDamage(float dmg, bool isCurseDmg)
     {
         if (!dead)
         {
-            Shake.instance.shake = 0.05f;
-            Shake.instance.shakeAmount = 0.05f;
-            Instantiate(damageParticle, transform.position + Vector3.up / 2, transform.rotation);
+            if (!isCurseDmg)
+            {
+                Shake.instance.shake = 0.05f;
+                Shake.instance.shakeAmount = 0.05f;
+                Instantiate(damageParticle, transform.position + Vector3.up / 2, transform.rotation);
+            }
+
             life -= dmg;
             lifeEvent.Invoke(life);
             if (life > maxLife)

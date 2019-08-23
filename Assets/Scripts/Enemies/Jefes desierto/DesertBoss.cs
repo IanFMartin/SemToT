@@ -288,7 +288,7 @@ public class DesertBoss : Enemy, IBoss
             life = maxLife;
     }
 
-    public override void TakeDamage(float dmg)
+    public override void TakeDamage(float dmg, bool isCurseDmg)
     {
         sight = alertedSight;
         healthBar.gameObject.SetActive(true);

@@ -214,7 +214,7 @@ public class FirstDesertGuardian : Enemy, IBoss
         zone.SetActive(true);
         var bomb = Instantiate(this.bomb, transform.position + transform.forward * 1.5f, transform.rotation);
         bomb.zone = zone;
-        bomb.speed = 0.05f;
+        bomb.speed = 5f;
         float dist = Vector3.Distance(target.position, transform.position);
         bomb.speed += dist * 0.005f;
         bomb.dir = ((target.transform.position - transform.position) / 3 + Vector3.up * 2);
@@ -222,7 +222,7 @@ public class FirstDesertGuardian : Enemy, IBoss
         bomb.dmg = 200;
     }
 
-    public override void TakeDamage(float dmg)
+    public override void TakeDamage(float dmg, bool isCurseDmg)
     {
         Instantiate(damageParticle, transform.position + Vector3.up / 2, transform.rotation);
         StartCoroutine(DamageColor());

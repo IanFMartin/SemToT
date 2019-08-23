@@ -25,7 +25,7 @@ public class HitHhealBullet : MonoBehaviour
     {
         if (other.GetComponent<IDamageable>() != null && other.gameObject.layer != myLayer)
         {
-            other.GetComponent<IDamageable>().TakeDamage(dmg);
+            other.GetComponent<IDamageable>().TakeDamage(dmg, false);
             Instantiate(hitEffect, transform.position, transform.rotation);
             if (myOwner != null)
                 myOwner.Heal(200);
