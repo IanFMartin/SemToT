@@ -107,7 +107,7 @@ public class ExpController : MonoBehaviour
             levlUpPanel.SetActive(true);
             timeToFade = 0;
 
-            player.UpdateMaxLife(player.maxLife + 10 * 100f);
+            player.UpdateMaxLife(player.maxLife + 10 * 25f);
             player.GetComponent<ChangeWeapon>().str += 10;
             player.GetComponent<ChangeWeapon>().dex += 10;
             StaticData.level++;
