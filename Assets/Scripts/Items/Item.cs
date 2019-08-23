@@ -13,7 +13,8 @@ public class Item : MonoBehaviour, ILooteable
         if(timeLooting >= timeToLoot)
         {
             Vector3 distance = t.position - transform.position;
-            transform.position += distance * 4 * Time.deltaTime;
+            //cambiar velocidad dependiente del player
+            transform.position += distance * 6 * Time.deltaTime;
             if (distance.magnitude < 1)
                 MyActionLoot(t);
         }

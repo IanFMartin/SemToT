@@ -5,6 +5,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour, IDamageable
 {
@@ -24,6 +25,8 @@ public class PlayerLife : MonoBehaviour, IDamageable
 
     //delete l8er
     bool _isPaused;
+    public Text pauseText;
+
 
     private void Start()
     {
@@ -35,6 +38,7 @@ public class PlayerLife : MonoBehaviour, IDamageable
 
         //delete l8er
         _isPaused = false;
+        pauseText.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -49,9 +53,15 @@ public class PlayerLife : MonoBehaviour, IDamageable
             _isPaused = !_isPaused;
 
             if (_isPaused)
+            {
                 Time.timeScale = 0;
+                pauseText.gameObject.SetActive(true);
+            }
             else
+            {
                 Time.timeScale = 1;
+                pauseText.gameObject.SetActive(false);
+            }
         }
     }
 
