@@ -26,7 +26,9 @@ public class PlayerLife : MonoBehaviour, IDamageable
     //delete l8er
     bool _isPaused;
     public Text pauseText;
-
+    public Image imageToFill;
+    //booleano para que no se llene la imagen en el nivel de la entrada 
+    public bool DontHasTofill;
 
     private void Start()
     {
@@ -46,6 +48,11 @@ public class PlayerLife : MonoBehaviour, IDamageable
         //if (Input.GetKey(KeyCode.L)) Dead();
 
         Curse();
+        //Para que se vaya llenando la imagen en base a la duracion del siguiente tick de la maldicion. 
+        if (imageToFill.gameObject.activeSelf && !DontHasTofill)
+        {
+            imageToFill.fillAmount = 1 - elapsedCurseTime;
+        }
 
         //delete l8er no funca
         if (Input.GetKeyDown(KeyCode.P))
@@ -101,9 +108,34 @@ public class PlayerLife : MonoBehaviour, IDamageable
         {
             if (!isCurseDmg)
             {
-                Shake.instance.shake = 0.05f;
-                Shake.instance.shakeAmount = 0.05f;
+                Shake.instance.shake = 0.1f;
+                Shake.instance.shakeAmount = 0.1f;
                 Instantiate(damageParticle, transform.position + Vector3.up / 2, transform.rotation);
+            }
+            else
+            //la maldicion hace un screenshake.
+            //aumenta el screenshake en base a la vida restante
+            {
+                if (life / maxLife < 0.25f)
+                {
+                    Shake.instance.shake = 0.15f;
+                    Shake.instance.shakeAmount = 0.15f;
+                }
+                else if (life / maxLife < 0.5f)
+                {
+                    Shake.instance.shake = 0.10f;
+                    Shake.instance.shakeAmount = 0.10f;
+                }
+                else if (life / maxLife < 0.75f)
+                {
+                    Shake.instance.shake = 0.08f;
+                    Shake.instance.shakeAmount = 0.08f;
+                }
+                else
+                {
+                    Shake.instance.shake = 0.05f;
+                    Shake.instance.shakeAmount = 0.05f;
+                }
             }
 
             life -= dmg;

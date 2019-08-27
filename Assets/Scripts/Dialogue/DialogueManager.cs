@@ -9,7 +9,8 @@ public class DialogueManager : MonoBehaviour
     private string sentence;
     public Text dialogueText;
     public Image dialogueCanvas;
-    public bool isCorrutineOn;
+    internal bool isCorrutineOn;
+    public float SecondsToWait;
 
     void Start()
     {
@@ -55,7 +56,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(SecondsToWait);
         }
         isCorrutineOn = false;
     }
