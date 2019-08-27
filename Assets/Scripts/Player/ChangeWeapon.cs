@@ -128,10 +128,11 @@ public class ChangeWeapon : MonoBehaviour
         main.startColor = new ParticleSystem.MinMaxGradient(colorCharge);
         specialCharge.gameObject.SetActive(true);
         currentWeapon.StartSpecialAttack(str);
+        /*
         if (currentWeapon.specialDamage >= currentWeapon.TopSpecialDamage + str)
         {
             EndSpecial();
-        }
+        }*/
     }
 
     private void EndSpecial()

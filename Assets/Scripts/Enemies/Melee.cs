@@ -26,7 +26,7 @@ public class Melee : Enemy
                 fsm.Feed(OnCondition.Persuit);
             else
                 Patrol();
-            beenDamage -= Time.deltaTime;
+            beenDamage -= Time.deltaTime *2;
         };
 
         persuit.OnEnter += () =>
@@ -40,7 +40,7 @@ public class Melee : Enemy
         {
             if (target != null)
             {
-                beenDamage -= Time.deltaTime;
+                beenDamage -= Time.deltaTime *2;
                 distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
                 Vector3 dirToGo = new Vector3(target.position.x - transform.position.x, 0, target.position.z - transform.position.z);
                 if (distanceToTarget < sight && distanceToTarget > range)
@@ -138,7 +138,7 @@ public class Melee : Enemy
     public override void TakeDamage(float dmg, bool isCurseDmg)
     {
         base.TakeDamage(dmg, false);
-        fsm.Feed(OnCondition.Stun);
+        //fsm.Feed(OnCondition.Stun);
     }
 
     public override void Die()
