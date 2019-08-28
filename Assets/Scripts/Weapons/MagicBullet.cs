@@ -31,18 +31,22 @@ public class MagicBullet : Bullet
 
     protected override void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<IDamageable>() != null && other.gameObject.layer != myLayer)
+        if (!other.GetComponent<PlayerLife>())
         {
-            var enemiesNear = AreaOfEffect();
-            foreach (var enemy in enemiesNear)
+            if (other.GetComponent<IDamageable>() != null && other.gameObject.layer != myLayer)
             {
-                enemy.TakeDamage(dmg, false);
+                var enemiesNear = AreaOfEffect();
+                foreach (var enemy in enemiesNear)
+                {
+                    enemy.TakeDamage(dmg, false);
+                }
+                var magicParticle = Instantiate(hitEffect, transform.position, transform.rotation);
+                StartCoroutine(ToDestroy(magicParticle.gameObject));
+                if (!invunerableBullet)
+                    Destroy(this.gameObject);
             }
-            var magicParticle = Instantiate(hitEffect, transform.position, transform.rotation);
-            StartCoroutine(ToDestroy(magicParticle.gameObject));
-            if (!invunerableBullet)
-                Destroy(this.gameObject);
         }
+
         else if (other.gameObject.layer == 13)
         {
             Destroy(this.gameObject);
