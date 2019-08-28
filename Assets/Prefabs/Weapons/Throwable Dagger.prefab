@@ -60,13 +60,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e316ce62241ef14799cc7c93f1eba48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 5631969506689280496, guid: 54e6aaada6b8dc343887e792431f6501,
+  hitEffect: {fileID: 5631969506689280496, guid: 3e77751569b4a834fbf1a857e5ea92d0,
     type: 3}
   speed: 0.3
   dmg: 0
   myLayer: 0
   invunerableBullet: 0
-  ignoreWalls: 0
+  ignoreWalls: 1
   radius: 0
   oscilant: 0
 --- !u!1001 &2418291075239533907

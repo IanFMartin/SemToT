@@ -112,31 +112,6 @@ public class PlayerLife : MonoBehaviour, IDamageable
                 Shake.instance.shakeAmount = 0.1f;
                 Instantiate(damageParticle, transform.position + Vector3.up / 2, transform.rotation);
             }
-            else
-            //la maldicion hace un screenshake.
-            //aumenta el screenshake en base a la vida restante
-            {
-                if (life / maxLife < 0.25f)
-                {
-                    Shake.instance.shake = 0.15f;
-                    Shake.instance.shakeAmount = 0.15f;
-                }
-                else if (life / maxLife < 0.5f)
-                {
-                    Shake.instance.shake = 0.10f;
-                    Shake.instance.shakeAmount = 0.10f;
-                }
-                else if (life / maxLife < 0.75f)
-                {
-                    Shake.instance.shake = 0.08f;
-                    Shake.instance.shakeAmount = 0.08f;
-                }
-                else
-                {
-                    Shake.instance.shake = 0.05f;
-                    Shake.instance.shakeAmount = 0.05f;
-                }
-            }
 
             life -= dmg;
             lifeEvent.Invoke(life);

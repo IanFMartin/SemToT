@@ -31,5 +31,6 @@ public class Dagger : Weapon
         addedRot += rot.eulerAngles;
         Quaternion newRot = Quaternion.Euler(addedRot);
         var special = Instantiate(specialBulletPrefab, offset, newRot);
+        special.layer = gameObject.layer;
     }
 }
