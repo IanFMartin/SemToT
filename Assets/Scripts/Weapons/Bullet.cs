@@ -20,7 +20,6 @@ public class Bullet : MonoBehaviour
         {
             other.GetComponent<IDamageable>().TakeDamage(dmg, false);
             var HE = Instantiate(hitEffect, transform.position, transform.rotation);
-            HE.layer = gameObject.layer;
             if (!invunerableBullet)
                 Destroy(this.gameObject);
         }
