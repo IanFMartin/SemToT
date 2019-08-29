@@ -22,6 +22,9 @@ public class ExpController : MonoBehaviour
     private float exp;
     private float timeToFade;
 
+    //texto q aprace cuando agarras la exp
+    public Text expGainText;
+
     private void Start()
     {
         if (GetComponent<AudioSource>() != null)
@@ -32,6 +35,9 @@ public class ExpController : MonoBehaviour
         InitialLevelUp(StaticData.level);
         exp = StaticData.exp;
         UpdateXpBar();
+
+
+        expGainText.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -62,10 +68,19 @@ public class ExpController : MonoBehaviour
 
     public void GetExp(float exp)
     {
+        expGainText.gameObject.SetActive(true);
+        expGainText.text = "+ " + exp.ToString() + " EXP";
         this.exp += exp;
         StaticData.exp = this.exp;
         CheckLevelUp();
         UpdateXpBar();
+        StartCoroutine(StopExpText());
+    }
+
+    IEnumerator StopExpText()
+    {
+        yield return new WaitForSeconds(1f);
+        expGainText.gameObject.SetActive(false);
     }
 
     private void InitialLevelUp(int level)

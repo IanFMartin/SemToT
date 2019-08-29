@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 17
   originalDmg: 0
-  TopSpecialDamage: 17
+  TopSpecialDamage: 30
   specialDamage: 0
   rateOfFire: 0.1
   allowAttack: 0

@@ -4325,6 +4325,7 @@ Transform:
   - {fileID: 842558}
   - {fileID: 893711583}
   - {fileID: 2095481207}
+  - {fileID: 299443984}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5696,6 +5697,85 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
+--- !u!1 &299443983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 299443984}
+  - component: {fileID: 299443986}
+  - component: {fileID: 299443985}
+  m_Layer: 5
+  m_Name: ExpText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &299443984
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299443983}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 82.8}
+  m_LocalScale: {x: 0.88833, y: 0.88833, z: 0.88833}
+  m_Children: []
+  m_Father: {fileID: 223183721}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 624.336, y: 31.206669}
+  m_SizeDelta: {x: 206.8, y: 52.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &299443985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299443983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.08290317, g: 0.254717, b: 0.15682286, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &299443986
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299443983}
+  m_CullTransparentMesh: 0
 --- !u!1 &303246906 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100014, guid: d9586b9c864ae2445bf8b1c945e791c7,
@@ -36087,6 +36167,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1103943340, guid: 2c3b04ca87994fe4581819856e7c653d, type: 3}
+      propertyPath: expGainText
+      value: 
+      objectReference: {fileID: 299443985}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c3b04ca87994fe4581819856e7c653d, type: 3}
 --- !u!1001 &1513185528739371273
@@ -36255,11 +36339,21 @@ PrefabInstance:
       propertyPath: grabCanvas
       value: 
       objectReference: {fileID: 2100211199}
-    - target: {fileID: 7061224499533709200, guid: 8056e972a81085544a65985243e317e0,
+    - target: {fileID: 3657753989765389185, guid: 8056e972a81085544a65985243e317e0,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e6d18612c25590f4b83375415f8af6f9, type: 2}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3657753989765389185, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3657753989765389185, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1586836700499816454, guid: 8056e972a81085544a65985243e317e0,
         type: 3}
       propertyPath: weaponsUI
@@ -36280,21 +36374,11 @@ PrefabInstance:
       propertyPath: originalDmg
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3657753989765389185, guid: 8056e972a81085544a65985243e317e0,
+    - target: {fileID: 7061224499533709200, guid: 8056e972a81085544a65985243e317e0,
         type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3657753989765389185, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3657753989765389185, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6d18612c25590f4b83375415f8af6f9, type: 2}
     - target: {fileID: 5227035693589417767, guid: 8056e972a81085544a65985243e317e0,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -36412,13 +36496,13 @@ PrefabInstance:
       propertyPath: radius
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 701559404, guid: 14e13e13306f8194e930ae875e9b7e75, type: 3}
-      propertyPath: stopNaNPropagation
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 701559399, guid: 14e13e13306f8194e930ae875e9b7e75, type: 3}
       propertyPath: shakeModifier
       value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 701559404, guid: 14e13e13306f8194e930ae875e9b7e75, type: 3}
+      propertyPath: stopNaNPropagation
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14e13e13306f8194e930ae875e9b7e75, type: 3}
