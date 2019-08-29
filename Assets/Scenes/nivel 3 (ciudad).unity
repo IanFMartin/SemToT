@@ -36180,6 +36180,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 223183721}
     m_Modifications:
+    - target: {fileID: 5370554901450403787, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680082707410776843, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5873639658134048764, guid: 8056e972a81085544a65985243e317e0,
         type: 3}
       propertyPath: m_Name
@@ -36339,6 +36349,11 @@ PrefabInstance:
       propertyPath: grabCanvas
       value: 
       objectReference: {fileID: 2100211199}
+    - target: {fileID: 7061224499533709200, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6d18612c25590f4b83375415f8af6f9, type: 2}
     - target: {fileID: 3657753989765389185, guid: 8056e972a81085544a65985243e317e0,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
@@ -36374,11 +36389,6 @@ PrefabInstance:
       propertyPath: originalDmg
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7061224499533709200, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e6d18612c25590f4b83375415f8af6f9, type: 2}
     - target: {fileID: 5227035693589417767, guid: 8056e972a81085544a65985243e317e0,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -36496,13 +36506,13 @@ PrefabInstance:
       propertyPath: radius
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 701559399, guid: 14e13e13306f8194e930ae875e9b7e75, type: 3}
-      propertyPath: shakeModifier
-      value: 1.3
-      objectReference: {fileID: 0}
     - target: {fileID: 701559404, guid: 14e13e13306f8194e930ae875e9b7e75, type: 3}
       propertyPath: stopNaNPropagation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 701559399, guid: 14e13e13306f8194e930ae875e9b7e75, type: 3}
+      propertyPath: shakeModifier
+      value: 1.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14e13e13306f8194e930ae875e9b7e75, type: 3}

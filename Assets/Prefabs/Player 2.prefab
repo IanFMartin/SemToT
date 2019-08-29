@@ -4862,7 +4862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &387642286607026059
 Transform:
   m_ObjectHideFlags: 0
@@ -4885,7 +4885,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5680082707410776843}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -9667,7 +9667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a200f5de8fb41e4b881c40b77128ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 4000
+  maxLife: 1500
   lifeEvent:
     m_PersistentCalls:
       m_Calls:
@@ -9685,7 +9685,18 @@ MonoBehaviour:
     m_TypeName: MyFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   CurseClockUpdate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: CurseTimeUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   deadEvent:
@@ -9704,8 +9715,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  curseDamage: 10
-  curseTime: 300
+  curseDamage: 60
+  curseTime: 150
   damageParticle: {fileID: 1882414597540614, guid: 44eac4685fc277a4bb89925b54dc219b,
     type: 3}
   pauseText: {fileID: 0}
@@ -9998,13 +10009,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
         type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 50
+      propertyPath: lengthInSec
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
         type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.72
+      propertyPath: simulationSpeed
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
         type: 3}
@@ -10023,38 +10039,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
         type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.990566
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.9019608
       objectReference: {fileID: 0}
     - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
         type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.990566
+      propertyPath: ShapeModule.radius.value
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
         type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.990566
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0.70536256
       objectReference: {fileID: 0}
     - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
         type: 3}
-      propertyPath: lengthInSec
-      value: 0.05
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.08317016
       objectReference: {fileID: 0}
     - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
         type: 3}
-      propertyPath: prewarm
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
-        type: 3}
-      propertyPath: InitialModule.size3D
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
-        type: 3}
-      propertyPath: ClampVelocityModule.enabled
-      value: 1
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.8396226
       objectReference: {fileID: 0}
     - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
         type: 3}
@@ -10065,41 +10071,6 @@ PrefabInstance:
         type: 3}
       propertyPath: ClampVelocityModule.dampen
       value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.9019608
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.r
-      value: 0.70536256
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.b
-      value: 0.8396226
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.g
-      value: 0.08317016
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
-        type: 3}
-      propertyPath: simulationSpeed
-      value: 0.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256450875646187568, guid: 564572e486a32fa449bf223869665106,
-        type: 3}
-      propertyPath: moveWithTransform
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564572e486a32fa449bf223869665106, type: 3}
@@ -10185,16 +10156,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.9935921
       objectReference: {fileID: 0}
-    - target: {fileID: 4618146326870138594, guid: a7c3f1a68d54e7645aabcb90067c207d,
-        type: 3}
-      propertyPath: grabCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6888465664147535146, guid: a7c3f1a68d54e7645aabcb90067c207d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7c3f1a68d54e7645aabcb90067c207d, type: 3}
 --- !u!4 &1513185529671282340 stripped
@@ -10214,6 +10175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sword 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161196750450873638, guid: b677931d3f6e86c449b2df1106a89eab,
+        type: 3}
+      propertyPath: damage
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3161196750450873638, guid: b677931d3f6e86c449b2df1106a89eab,
         type: 3}
