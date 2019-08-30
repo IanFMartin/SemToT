@@ -24,6 +24,8 @@ public class ExpController : MonoBehaviour
 
     //texto q aprace cuando agarras la exp
     public Text expGainText;
+    //contador de la corrutina
+    private float howMuchExp;
 
     private void Start()
     {
@@ -68,20 +70,35 @@ public class ExpController : MonoBehaviour
 
     public void GetExp(float exp)
     {
-        expGainText.gameObject.SetActive(true);
-        expGainText.text = "+ " + exp.ToString() + " EXP";
+        ///expGainText.gameObject.SetActive(true);
+        ///expGainText.text = "+ " + exp.ToString() + " EXP";
+        //esto lo uso para el contador de la corrutina para que vaya reduciendose el numero en el texto
+        howMuchExp += exp;
         this.exp += exp;
         StaticData.exp = this.exp;
         CheckLevelUp();
         UpdateXpBar();
-        StartCoroutine(StopExpText());
+        StopAllCoroutines();
+        StartCoroutine(TextExp());
+        ///StartCoroutine(StopExpText());
     }
-
-    IEnumerator StopExpText()
+    //corrutina para el texto de la experiencia.
+    IEnumerator TextExp()
     {
-        yield return new WaitForSeconds(1f);
+        expGainText.gameObject.SetActive(true);
+        while(howMuchExp>0)
+        {
+            expGainText.text = " + " + (int)howMuchExp + " EXP";
+            howMuchExp -= Time.deltaTime*40;
+            yield return null;
+        }
         expGainText.gameObject.SetActive(false);
     }
+    //IEnumerator StopExpText()
+    //{
+    //    yield return new WaitForSeconds(1f);
+    //    expGainText.gameObject.SetActive(false);
+    //}
 
     private void InitialLevelUp(int level)
     {
@@ -102,6 +119,7 @@ public class ExpController : MonoBehaviour
     public void LevelUp()
     {
         GetExp(maxExp);
+        howMuchExp = 0;
     }
 
     public void CheckLevelUp()

@@ -752,6 +752,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5644223, y: 1, z: 1.4573338}
   m_Center: {x: 0.16437496, y: 0, z: -0.5318}
+--- !u!114 &57369097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 307263185285636739, guid: 2c3b04ca87994fe4581819856e7c653d,
+    type: 3}
+  m_PrefabInstance: {fileID: 832234488093687259}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &57587955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8424765587692151830, guid: aa8727d2729441c4eb85042788ee9f45,
@@ -36042,21 +36054,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 832234489631329801, guid: 2c3b04ca87994fe4581819856e7c653d,
-        type: 3}
-      propertyPath: playerLife
-      value: 
-      objectReference: {fileID: 1091731528}
-    - target: {fileID: 832234489631329801, guid: 2c3b04ca87994fe4581819856e7c653d,
-        type: 3}
-      propertyPath: topHealthBar
-      value: 
-      objectReference: {fileID: 2070439237}
-    - target: {fileID: 832234489631329801, guid: 2c3b04ca87994fe4581819856e7c653d,
-        type: 3}
-      propertyPath: curseClock
-      value: 
-      objectReference: {fileID: 1253838952}
     - target: {fileID: 832234489631329805, guid: 2c3b04ca87994fe4581819856e7c653d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -36162,6 +36159,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 832234489631329801, guid: 2c3b04ca87994fe4581819856e7c653d,
+        type: 3}
+      propertyPath: playerLife
+      value: 
+      objectReference: {fileID: 1091731528}
+    - target: {fileID: 832234489631329801, guid: 2c3b04ca87994fe4581819856e7c653d,
+        type: 3}
+      propertyPath: topHealthBar
+      value: 
+      objectReference: {fileID: 2070439237}
+    - target: {fileID: 832234489631329801, guid: 2c3b04ca87994fe4581819856e7c653d,
+        type: 3}
+      propertyPath: curseClock
+      value: 
+      objectReference: {fileID: 1253838952}
     - target: {fileID: 3633715899812026693, guid: 2c3b04ca87994fe4581819856e7c653d,
         type: 3}
       propertyPath: m_IsActive
@@ -36170,7 +36182,7 @@ PrefabInstance:
     - target: {fileID: 1103943340, guid: 2c3b04ca87994fe4581819856e7c653d, type: 3}
       propertyPath: expGainText
       value: 
-      objectReference: {fileID: 299443985}
+      objectReference: {fileID: 57369097}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c3b04ca87994fe4581819856e7c653d, type: 3}
 --- !u!1001 &1513185528739371273
@@ -36185,6 +36197,76 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: CurseClockUpdate.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: lifeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1827337170}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: deadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1089585133}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: maxLife
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: curseDamage
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: curseTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: CurseClockUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: CurseClockUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: CurseClockUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1827337170}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: CurseClockUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CurseTimeUpdate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: CurseClockUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: pauseText
+      value: 
+      objectReference: {fileID: 2095481208}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: imageToFill
+      value: 
+      objectReference: {fileID: 630258891}
+    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+        type: 3}
+      propertyPath: healingParticle
+      value: 
+      objectReference: {fileID: 1513185528739371274}
     - target: {fileID: 1435774314, guid: 8056e972a81085544a65985243e317e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 56.6
@@ -36234,76 +36316,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: CurseClockUpdate.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: lifeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1827337170}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: deadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1089585133}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: maxLife
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: curseDamage
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: curseTime
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: CurseClockUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: CurseClockUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: CurseClockUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1827337170}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: CurseClockUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CurseTimeUpdate
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: CurseClockUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: pauseText
-      value: 
-      objectReference: {fileID: 2095481208}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: imageToFill
-      value: 
-      objectReference: {fileID: 630258891}
-    - target: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
-        type: 3}
-      propertyPath: healingParticle
-      value: 
-      objectReference: {fileID: 1513185528739371274}
     - target: {fileID: 1586836700499816454, guid: 8056e972a81085544a65985243e317e0,
         type: 3}
       propertyPath: weaponsUI
@@ -36957,11 +36969,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 7303017758972388966, guid: 9b91f92ae8a3b7941b5fc3874978028e,
-        type: 3}
-      propertyPath: playerLife
-      value: 
-      objectReference: {fileID: 1091731528}
     - target: {fileID: 7303017758972388965, guid: 9b91f92ae8a3b7941b5fc3874978028e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37017,6 +37024,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7303017758972388966, guid: 9b91f92ae8a3b7941b5fc3874978028e,
+        type: 3}
+      propertyPath: playerLife
+      value: 
+      objectReference: {fileID: 1091731528}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b91f92ae8a3b7941b5fc3874978028e, type: 3}
 --- !u!1001 &7611617355719205224
