@@ -136,6 +136,9 @@ MonoBehaviour:
   dissolve: {fileID: 4800000, guid: 82a3e00ffe5ceb745aae5381783e42ae, type: 3}
   deadParticle: {fileID: 3187630490164388762, guid: cc84d2e75826bea48a9ad2befe075a13,
     type: 3}
+  recoveryTime: 1
+  maxPrepTime: 1
+  prepParticule: {fileID: 9046767349300350054}
 --- !u!114 &7127092018596720080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,10 +327,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8403952132574629376}
     m_Modifications:
-    - target: {fileID: 100002, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
-      propertyPath: m_Name
-      value: GolemIdle
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0050201
@@ -384,6 +383,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.1926816
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
+      propertyPath: m_Name
+      value: GolemIdle
+      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -413,11 +416,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8403952132574629376}
     m_Modifications:
-    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
-        type: 3}
-      propertyPath: m_Name
-      value: Anticipation Particle
-      objectReference: {fileID: 0}
     - target: {fileID: 3877819826918424996, guid: e2bb385f801c87740999a843d6576da8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -473,11 +471,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
+        type: 3}
+      propertyPath: m_Name
+      value: Anticipation Particle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2bb385f801c87740999a843d6576da8, type: 3}
 --- !u!4 &9046767349300350048 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3877819826918424996, guid: e2bb385f801c87740999a843d6576da8,
+    type: 3}
+  m_PrefabInstance: {fileID: 5214141899947298244}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &9046767349300350054 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3877819826918424994, guid: e2bb385f801c87740999a843d6576da8,
     type: 3}
   m_PrefabInstance: {fileID: 5214141899947298244}
   m_PrefabAsset: {fileID: 0}

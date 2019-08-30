@@ -1919,6 +1919,9 @@ MonoBehaviour:
   dissolve: {fileID: 4800000, guid: 82a3e00ffe5ceb745aae5381783e42ae, type: 3}
   deadParticle: {fileID: 3187630490164388762, guid: cc84d2e75826bea48a9ad2befe075a13,
     type: 3}
+  recoveryTime: 1
+  maxPrepTime: 1
+  prepParticule: {fileID: 348430811880606875}
 --- !u!114 &7661756167753382450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3079,11 +3082,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1320072593538784425}
     m_Modifications:
-    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
-        type: 3}
-      propertyPath: m_Name
-      value: Anticipation Particle
-      objectReference: {fileID: 0}
     - target: {fileID: 3877819826918424996, guid: e2bb385f801c87740999a843d6576da8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3139,11 +3137,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
+        type: 3}
+      propertyPath: m_Name
+      value: Anticipation Particle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2bb385f801c87740999a843d6576da8, type: 3}
 --- !u!4 &348430811880606877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3877819826918424996, guid: e2bb385f801c87740999a843d6576da8,
+    type: 3}
+  m_PrefabInstance: {fileID: 3532255237320559929}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &348430811880606875 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3877819826918424994, guid: e2bb385f801c87740999a843d6576da8,
     type: 3}
   m_PrefabInstance: {fileID: 3532255237320559929}
   m_PrefabAsset: {fileID: 0}

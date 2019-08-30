@@ -9,7 +9,15 @@ public class Melee : Enemy
     public Shader dissolve;
     public GameObject deadParticle;
 
-    private float beenDamage;
+    //private float beenDamage;
+
+    float _prepTime;
+    public float recoveryTime;
+    public float maxPrepTime;
+    public ParticleSystem prepParticule;
+
+    //delete l8er
+    bool _hasPlayParticle = false;
 
     void Start()
     {
@@ -18,6 +26,7 @@ public class Melee : Enemy
         var attack = new State<OnCondition>("Attack");
         var stun = new State<OnCondition>("Stun");
         var die = new State<OnCondition>("Dead");
+        var prep = new State<OnCondition>("Prep");
 
         idle.OnUpdate += () =>
         {
@@ -26,7 +35,7 @@ public class Melee : Enemy
                 fsm.Feed(OnCondition.Persuit);
             else
                 Patrol();
-            beenDamage -= Time.deltaTime *2;
+            //beenDamage -= Time.deltaTime *2;
         };
 
         persuit.OnEnter += () =>
@@ -40,7 +49,7 @@ public class Melee : Enemy
         {
             if (target != null)
             {
-                beenDamage -= Time.deltaTime *2;
+                //beenDamage -= Time.deltaTime *2;
                 distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
                 Vector3 dirToGo = new Vector3(target.position.x - transform.position.x, 0, target.position.z - transform.position.z);
                 if (distanceToTarget < sight && distanceToTarget > range)
@@ -55,7 +64,7 @@ public class Melee : Enemy
                 else if (dirToGo.magnitude <= range)
                 {
                     transform.forward = Vector3.Lerp(transform.forward, dirToGo, lerpSpeed);
-                    fsm.Feed(OnCondition.Attack);
+                    fsm.Feed(OnCondition.Prep);
                 }
             }
         };
@@ -69,6 +78,7 @@ public class Melee : Enemy
 
         attack.OnEnter += () =>
         {
+            /*
             if(beenDamage <= 0)
             {
                 anim.SetTrigger("Attack");
@@ -76,12 +86,22 @@ public class Melee : Enemy
             else
             {
                 fsm.Feed(OnCondition.Idle);
-            }
+            }*/
+            anim.SetTrigger("Attack");
         };
+
         attack.OnUpdate += () =>
         {
-            fsm.Feed(OnCondition.Idle);
-            //StartCoroutine(ToIdle());
+            _prepTime += Time.deltaTime;
+            if(_prepTime >= recoveryTime)
+            {
+                fsm.Feed(OnCondition.Idle);
+            }            
+        };
+
+        attack.OnExit += () =>
+        {
+            _prepTime = 0;
         };
 
         die.OnEnter += () =>
@@ -103,6 +123,40 @@ public class Melee : Enemy
             Destroy(this.gameObject, 3f);
         };
 
+        prep.OnEnter += () =>
+        {
+            anim.SetBool("Run", false);
+            /*
+            prepParticule.gameObject.SetActive(true);
+            prepParticule.Play();*/
+        };
+
+        prep.OnUpdate += () =>
+        {
+            _prepTime += Time.deltaTime;
+
+            //tiempo dps del frenado para prender la particula. delete cuando haya animacion de prep
+            if(_prepTime >= 0.3f && !_hasPlayParticle)
+            {
+                prepParticule.gameObject.SetActive(true);
+                prepParticule.Play();
+                _hasPlayParticle = true;
+            }
+
+            if (_prepTime >= maxPrepTime)
+            {
+                fsm.Feed(OnCondition.Attack);
+            }
+        };
+
+        prep.OnExit += () =>
+        {
+            prepParticule.Stop();
+            prepParticule.gameObject.SetActive(false);
+            _prepTime = 0;
+            _hasPlayParticle = false;
+        };
+
         idle.AddTransition(OnCondition.Attack, attack);
         idle.AddTransition(OnCondition.Persuit, persuit);
         idle.AddTransition(OnCondition.Die, die);
@@ -112,6 +166,7 @@ public class Melee : Enemy
         persuit.AddTransition(OnCondition.Attack, attack);
         persuit.AddTransition(OnCondition.Die, die);
         persuit.AddTransition(OnCondition.Stun, stun);
+        persuit.AddTransition(OnCondition.Prep, prep);
 
         stun.AddTransition(OnCondition.Idle, idle);
         stun.AddTransition(OnCondition.Persuit, persuit);
@@ -121,6 +176,10 @@ public class Melee : Enemy
         attack.AddTransition(OnCondition.Idle, idle);
         attack.AddTransition(OnCondition.Die, die);
         attack.AddTransition(OnCondition.Stun, stun);
+
+        prep.AddTransition(OnCondition.Attack, attack);
+        prep.AddTransition(OnCondition.Die, die);
+        prep.AddTransition(OnCondition.Idle, idle);
 
         fsm = new StateMachine<OnCondition>(idle);
     }
@@ -162,6 +221,7 @@ public class Melee : Enemy
         Persuit,
         Attack,
         Stun,
-        Die
+        Die,
+        Prep
     }
 }

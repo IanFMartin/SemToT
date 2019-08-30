@@ -11,6 +11,7 @@ public class LifeItem : Item
     {
         Instantiate(lifeParticle, t.position, t.rotation);
         t.GetComponent<PlayerLife>().TakeDamage(-lifeRestore, false);
+        t.GetComponent<PlayerLife>().PlayHealingParticule();
         Destroy(this.gameObject);
     }
 }

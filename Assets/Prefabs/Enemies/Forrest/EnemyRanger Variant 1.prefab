@@ -100,6 +100,9 @@ MonoBehaviour:
   dissolve: {fileID: 4800000, guid: 82a3e00ffe5ceb745aae5381783e42ae, type: 3}
   deadParticle: {fileID: 3187630490164388762, guid: cc84d2e75826bea48a9ad2befe075a13,
     type: 3}
+  recoveryTime: 1
+  maxPrepTime: 1
+  prepParticule: {fileID: 1538315583837914581}
 --- !u!114 &1603770712039458212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,11 +284,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 358032635304208749}
     m_Modifications:
-    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
-        type: 3}
-      propertyPath: m_Name
-      value: Anticipation Particle
-      objectReference: {fileID: 0}
     - target: {fileID: 3877819826918424996, guid: e2bb385f801c87740999a843d6576da8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -341,11 +339,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
+        type: 3}
+      propertyPath: m_Name
+      value: Anticipation Particle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2bb385f801c87740999a843d6576da8, type: 3}
 --- !u!4 &1538315583837914579 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3877819826918424996, guid: e2bb385f801c87740999a843d6576da8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2344679176196047991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1538315583837914581 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3877819826918424994, guid: e2bb385f801c87740999a843d6576da8,
     type: 3}
   m_PrefabInstance: {fileID: 2344679176196047991}
   m_PrefabAsset: {fileID: 0}
@@ -356,14 +370,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 358032635304208749}
     m_Modifications:
-    - target: {fileID: 100132, guid: dba8fb1766c6d6144abc0642eb752ade, type: 3}
-      propertyPath: m_Name
-      value: Zombie Idle
-      objectReference: {fileID: 0}
-    - target: {fileID: 100132, guid: dba8fb1766c6d6144abc0642eb752ade, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: dba8fb1766c6d6144abc0642eb752ade, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01
@@ -408,6 +414,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100132, guid: dba8fb1766c6d6144abc0642eb752ade, type: 3}
+      propertyPath: m_Name
+      value: Zombie Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 100132, guid: dba8fb1766c6d6144abc0642eb752ade, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: dba8fb1766c6d6144abc0642eb752ade, type: 3}
       propertyPath: m_Controller
       value: 
@@ -441,11 +455,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5650271511487575685}
     m_Modifications:
-    - target: {fileID: 694839158609153132, guid: b92459586d8913a4ba4b671ba719aef3,
-        type: 3}
-      propertyPath: m_Name
-      value: Bow
-      objectReference: {fileID: 0}
     - target: {fileID: 9152257045177290911, guid: b92459586d8913a4ba4b671ba719aef3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -510,6 +519,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 694839158609153132, guid: b92459586d8913a4ba4b671ba719aef3,
+        type: 3}
+      propertyPath: m_Name
+      value: Bow
       objectReference: {fileID: 0}
     - target: {fileID: 3556301698059466494, guid: b92459586d8913a4ba4b671ba719aef3,
         type: 3}

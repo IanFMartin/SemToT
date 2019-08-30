@@ -11337,6 +11337,9 @@ MonoBehaviour:
   dissolve: {fileID: 4800000, guid: 82a3e00ffe5ceb745aae5381783e42ae, type: 3}
   deadParticle: {fileID: 3187630490164388762, guid: cc84d2e75826bea48a9ad2befe075a13,
     type: 3}
+  recoveryTime: 1
+  maxPrepTime: 1
+  prepParticule: {fileID: 6561673712428889965}
 --- !u!114 &3506957607687195173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12418,10 +12421,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5456278273714094017}
     m_Modifications:
-    - target: {fileID: 100002, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
-      propertyPath: m_Name
-      value: GolemIdle
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12478,21 +12477,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.8828
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
+      propertyPath: m_Name
+      value: GolemIdle
+      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ce0f493152680154bb6484b3b83f6c32, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
---- !u!4 &4269472814646510977 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400066, guid: f3dd9010cfc3166469e1e23e53f8e01b,
-    type: 3}
-  m_PrefabInstance: {fileID: 4269472814646910787}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4269472814646511041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: f3dd9010cfc3166469e1e23e53f8e01b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4269472814646910787}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4269472814646510977 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400066, guid: f3dd9010cfc3166469e1e23e53f8e01b,
     type: 3}
   m_PrefabInstance: {fileID: 4269472814646910787}
   m_PrefabAsset: {fileID: 0}
@@ -12503,11 +12506,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5456278273714094017}
     m_Modifications:
-    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
-        type: 3}
-      propertyPath: m_Name
-      value: Anticipation Particle
-      objectReference: {fileID: 0}
     - target: {fileID: 3877819826918424996, guid: e2bb385f801c87740999a843d6576da8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12563,11 +12561,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
+        type: 3}
+      propertyPath: m_Name
+      value: Anticipation Particle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2bb385f801c87740999a843d6576da8, type: 3}
 --- !u!4 &6561673712428889963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3877819826918424996, guid: e2bb385f801c87740999a843d6576da8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7989236135298021071}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6561673712428889965 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3877819826918424994, guid: e2bb385f801c87740999a843d6576da8,
     type: 3}
   m_PrefabInstance: {fileID: 7989236135298021071}
   m_PrefabAsset: {fileID: 0}
