@@ -1,15 +1,52 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class Guide : MonoBehaviour
 {
 
     public Dialogue dialogue;
+    private Dialogue firstDialogue;
+    private DialogueManager _DM;
+    //para reiniciar los botones
+    public Button[] allButtons;
+
+
+    public void Start()
+    {
+        firstDialogue = dialogue;
+        _DM = FindObjectOfType<DialogueManager>();
+    }
 
     public void Talking()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        _DM.StartDialogue(firstDialogue);
+        foreach (var button in allButtons)
+        {
+            button.gameObject.SetActive(false);
+        }
+        if (firstDialogue.Buttons.Any())
+        {
+            foreach (var button in firstDialogue.Buttons)
+            {
+                button.gameObject.SetActive(true);
+            }
+        }
+    }
+    //para cambiar los dialogos.
+    public void ChangeDialogue(Dialogue newDialogue)
+    {
+        dialogue = newDialogue;
+        if (dialogue.Buttons.Any())
+        {
+            foreach (var button in dialogue.Buttons)
+            {
+                button.gameObject.SetActive(true);
+            }
+        }
+            _DM.DisplayNextSentence(dialogue);
+
     }
     #region sistema de dialogo viejo 
     //public Text text;
@@ -32,13 +69,13 @@ public class Guide : MonoBehaviour
     //}
     //private void Update()
     //{
-        //if(Input.GetKeyDown(KeyCode.E) && isTalking)
-        //{
-        //    StopAllCoroutines();
-        //    //portal.gameObject.SetActive(true);
-        //    textBackground.gameObject.SetActive(false);
-        //    isTalking = false;
-        //}
+    //if(Input.GetKeyDown(KeyCode.E) && isTalking)
+    //{
+    //    StopAllCoroutines();
+    //    //portal.gameObject.SetActive(true);
+    //    textBackground.gameObject.SetActive(false);
+    //    isTalking = false;
+    //}
     //}
 
     //public void Talking()

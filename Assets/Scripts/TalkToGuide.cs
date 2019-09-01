@@ -8,7 +8,6 @@ public class TalkToGuide : MonoBehaviour
     public Guide guide;
     public Image interactionImg;
     public int rangeOfTalking;
-    private bool _canTalk = true;
     private DialogueManager DM;
     private void Start()
     {
@@ -22,33 +21,25 @@ public class TalkToGuide : MonoBehaviour
             var distanceToTarget = Vector3.Distance(transform.position, guide.transform.position);
             if (distanceToTarget < rangeOfTalking)
             {
-                if (_canTalk == true)
+                if (!DM.IsTalking)
+                {
                     interactionImg.gameObject.SetActive(true);
+                    GetComponent<ChangeWeapon>().enabled = true;
+                }
                 else
+                {
                     interactionImg.gameObject.SetActive(false);
-                if (Input.GetKeyDown(KeyCode.E) && _canTalk)
+                    GetComponent<ChangeWeapon>().enabled = false;
+                }
+                if (Input.GetKeyDown(KeyCode.E) && !DM.IsTalking)
                 {
                     guide.Talking();
-                    _canTalk = false;
-                }
-                else if (Input.GetKeyDown(KeyCode.E))
-                {
-                    if (DM.isCorrutineOn)
-                    {
-                        DM.DisplayFullSentence();
-                    }
-                    else
-                    {
-                        DM.DisplayNextSentence();
-                    }
                 }
             }
             else
             {
                 interactionImg.gameObject.SetActive(false);
-                _canTalk = true;
                 DM.EndDialogue();
-
             }
         }
         else
