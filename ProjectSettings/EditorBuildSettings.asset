@@ -9,12 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel 0 ( entrada).unity
     guid: 703c8aac62751684cb10ed14481bbeb2
   - enabled: 1
-    path: Assets/Scenes/nivel 1 (bosque) rivero.unity
-    guid: 559ccc8f35791f1489e698353b289b9d
+    path: Assets/Scenes/nivel 1 (bosque) version 2.unity
+    guid: 8a479b534ccdf3d46807b07504e77eb5
   - enabled: 1
+    path: Assets/Scenes/nivel 1.5 pelea con el primer jefe.unity
+    guid: c16076cedc864554b8cd69807b3a4727
+  - enabled: 0
     path: Assets/Scenes/nivel 2 (desierto).unity
     guid: cc0154d7abbd52345b6933ffd5cb1f71
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/nivel 3 (ciudad).unity
     guid: d0be8af23a6144c4aa23a8f8669b2840
+  - enabled: 0
+    path: Assets/Scenes/(Viejo) nivel 1 (bosque) rivero.unity
+    guid: 559ccc8f35791f1489e698353b289b9d
   m_configObjects: {}
