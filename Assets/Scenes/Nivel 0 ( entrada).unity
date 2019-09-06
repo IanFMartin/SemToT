@@ -8067,6 +8067,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 205117509, guid: 0e1609b182030e04099e5bb259569b6f, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 205117511, guid: 0e1609b182030e04099e5bb259569b6f, type: 3}
       propertyPath: m_Constraints
       value: 80
@@ -21356,7 +21360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ImplosionCurseParticle: {fileID: 4106869034335889242, guid: 3a6c7e6ddad5d234ca454198d7f14905,
     type: 3}
-  _target: {fileID: 0}
+  _target: {fileID: 205117509}
   curseClock: {fileID: 874697050}
 --- !u!114 &1040416804
 MonoBehaviour:

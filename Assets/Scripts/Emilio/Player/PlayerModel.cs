@@ -23,7 +23,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
     public float jumpForce;
     bool _canDash = true;
     bool _canJump = true;
-    bool _canMove = true;
+    public bool canMove = true;
     public float dashCooldown;
     public float jumpCooldown;
     float _currentDashCooldown;
@@ -146,7 +146,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
 
     public void Move(float hAxis, float vAxis)
     {
-        if (_canMove)
+        if (canMove)
         {
             MouseMovement();
 
@@ -157,7 +157,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
             _rb.velocity = new Vector3(velocity.x, _rb.velocity.y, velocity.z);
 
             OnMove(velocity != Vector3.zero, Vector3.SignedAngle(velocity, transform.forward, transform.up) < -90 || Vector3.SignedAngle(velocity, transform.forward, transform.up) > 90);
-            Debug.Log(Vector3.SignedAngle(velocity, transform.forward, transform.up));
+
         }
     }
 
@@ -290,7 +290,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
         if (_canJump)
         {
             _canJump = false;
-            _canMove = false;
+            canMove = false;
             jumping = true;
             _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 
@@ -315,7 +315,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
             //_rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             _rb.velocity = Vector3.zero;
             
-            _canMove = true;
+            canMove = true;
             Landed();
         }
     }
@@ -467,7 +467,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
         if(currentWeapon.hasSpecialAttack && currentWeapon.allowAttack)
         {
             _isCharging = true;
-            _canMove = false;
+            canMove = false;
             OnIdle(false);//praticula
             chargeValue -= 0.02f;
             currentWeapon.StartSpecialAttack(str);
@@ -485,7 +485,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
         {
             _isCharging = false;
             chargeValue = 1;
-            _canMove = true;
+            canMove = true;
             OnSpecial();
             SpecialAttack();
         }
@@ -496,6 +496,11 @@ public class PlayerModel : MonoBehaviour, IDamageable
         yield return new WaitForSeconds(0.1f);
         _isAttacking = false;
         OnIdle(true);
+    }
+
+    public void ToIdle2()
+    {
+        OnIdle(false);
     }
 
     public void SpecialAttack()
@@ -637,7 +642,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
         {
             _canDash = false;
             _canJump = false;
-            _canMove = false;
+            canMove = false;
 
             Shake.instance.shake = 0.3f;
             Shake.instance.shakeAmount = 0.7f;
@@ -659,7 +664,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
         }
         _canDash = true;
         _canJump = true;
-        _canMove = true;
+        canMove = true;
     }
 
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CopyHero : MonoBehaviour, IDamageable
 {
-    private PlayerController _target;
+    private PlayerModel _target;
     public ParticleSystem ExplosionCurseParticle;
     public List<Transform> InvisibleWalls;
     public Canvas uiCanvas;
