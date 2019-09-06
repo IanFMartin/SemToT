@@ -12,7 +12,7 @@ public class KeyboardController : IController
         _playerModel = m;
         _playerView = v;
 
-        //move
+        _playerModel.OnMove += _playerView.OnMove;
         _playerModel.OnAttack += _playerView.OnAttack;
         _playerModel.OnRangeAttack += _playerView.OnRangeAttack;
         _playerModel.OnSpecial += _playerView.OnSpecial;
@@ -36,13 +36,21 @@ public class KeyboardController : IController
 
     public void OnUpdate()
     {
-        //if (Input.GetMouseButton(0))
-        //attack
+        if (Input.GetMouseButton(0))
+            _playerModel.Attack();
+
+        if (Input.GetMouseButtonDown(1))
+            _playerModel.StartSpecial();
+        if (Input.GetMouseButtonUp(1))
+            _playerModel.EndSpecial();
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
             _playerModel.dashInput = true;
 
         if (Input.GetKeyDown(KeyCode.Space))
             _playerModel.jumpInput = true;
+
+        if (Input.GetKeyDown(KeyCode.Q))
+            _playerModel.SwitchWeapon();
     }
 }

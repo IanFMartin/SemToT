@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerView))]
 public class PlayerModel : MonoBehaviour
@@ -19,6 +20,7 @@ public class PlayerModel : MonoBehaviour
 
     #region Skills var
     public float dashForce;
+    public float jumpForce;
     bool _canDash;
     bool _canJump;
     bool _canMove = true;
@@ -26,6 +28,9 @@ public class PlayerModel : MonoBehaviour
     public float jumpCooldown;
     float _currentDashCooldown;
     float _currentJumpCooldown;
+    bool jumping;
+    public float jumpPower;
+    public float jumpRadius;
     #endregion
 
     #region MVC vars
@@ -36,7 +41,7 @@ public class PlayerModel : MonoBehaviour
     #endregion
 
     #region events
-    //public event Action<bool> OnMove = delegate {};
+    public event Action<bool, bool> OnMove = delegate {};
     public event Action<int> OnAttack = delegate {};
     public event Action OnRangeAttack = delegate {};
     public event Action OnDash = delegate {};
@@ -44,7 +49,7 @@ public class PlayerModel : MonoBehaviour
     public event Action OnHit = delegate {};
     public event Action OnDeath = delegate {};
     public event Action OnSpecial = delegate {};
-    public event Action OnIdle = delegate {};
+    public event Action<bool> OnIdle = delegate {};
 
     #endregion
 
@@ -66,10 +71,29 @@ public class PlayerModel : MonoBehaviour
     public float dex;
     float damage;
     float chargeValue;
+    public float comboSlashTimer;
+    float _currentComboTimer;
+    bool _nextSlash;
+    int _slashCounter;
+    bool _isCharging;
+
+    ClassChangeFeedback fbClass;
     #endregion
 
     //remove l8er
     public Camera cam;
+    public UILife ui;
+    public PlayerSpawner spawner;
+    public GameObject damageParticle;
+    public ParticleSystem healingParticle;
+    bool _isPaused;
+    public Text pauseText;
+    public Image imageToFill;
+    public bool DontHasTofill;
+    public GameObject dashEffect;
+    public GameObject smoke;
+    public GameObject expansion;
+    public GameObject crack;
 
     void Start()
     {
@@ -85,17 +109,25 @@ public class PlayerModel : MonoBehaviour
         if (weapon2 != null)
             weapon2.gameObject.SetActive(false);
 
-        //LoadWeapons();
-        //fbClass.ChangeFeedback(currentWeapon);
+        fbClass = GetComponent<ClassChangeFeedback>();
+        LoadWeapons();
+        fbClass.ChangeFeedback(currentWeapon);
+
+        //delete l8er
+        _isPaused = false;
+        pauseText.gameObject.SetActive(false);
+        healingParticle.gameObject.SetActive(false);
     }    
 
     void Update()
     {
         DashCooldown();
         JumpCooldown();
+        ComboTimerUpdate();
         _currentController.OnUpdate();
 
-        //pausa?
+        //pausa
+        LifeUpdate();
     }
 
     void FixedUpdate()
@@ -116,7 +148,7 @@ public class PlayerModel : MonoBehaviour
             var velocity = (moveHorizontal + moveVertical).normalized * speed;
             _rb.velocity = new Vector3(velocity.x, _rb.velocity.y, velocity.z);
 
-            //animator
+            OnMove(_rb.velocity != Vector3.zero, Vector3.Angle(_rb.velocity, transform.forward) < 180);
         }
     }
 
@@ -157,11 +189,13 @@ public class PlayerModel : MonoBehaviour
         {
             if (!isCurseDmg)
             {
-                //shake + particula
+                Shake.instance.shake = 0.1f;
+                Shake.instance.shakeAmount = 0.1f;
+                Instantiate(damageParticle, transform.position + Vector3.up / 2, transform.rotation);
             }
 
             _health -= dmg;
-            //updeatear el view para la ui
+            ui.ShowLife(_health);
             if (_health > maxHealth)
                 _health = maxHealth;
             if (_health <= 0)
@@ -172,7 +206,52 @@ public class PlayerModel : MonoBehaviour
     void Death()
     {
         _isDead = true;
-        //update animator
+        OnDeath();
+        this.gameObject.layer = 13;
+        spawner.Respawn();
+        WeaponTable.WeaponTableSingleton.weapon1ID = 1;
+        WeaponTable.WeaponTableSingleton.weapon2ID = -1;
+        GetComponent<Rigidbody>().drag = 50;
+    }
+
+    public void PlayHealingParticule()
+    {
+        healingParticle.gameObject.SetActive(true);
+        healingParticle.Play();
+        StartCoroutine(StopParticle());
+    }
+
+    IEnumerator StopParticle()
+    {
+        yield return new WaitForSeconds(1f);
+        healingParticle.Stop();
+        healingParticle.gameObject.SetActive(false);
+    }
+
+    void LifeUpdate()
+    {
+        Curse();
+        if (imageToFill.gameObject.activeSelf && !DontHasTofill)
+        {
+            imageToFill.fillAmount = 1 - _currentCurseTime;
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            _isPaused = !_isPaused;
+
+            if (_isPaused)
+            {
+                Time.timeScale = 0;
+                pauseText.gameObject.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                pauseText.gameObject.SetActive(false);
+            }
+        }
     }
 
     #endregion
@@ -186,9 +265,12 @@ public class PlayerModel : MonoBehaviour
             _canDash = false;
             //xq speed? investigar cuando termine player
             _rb.AddForce(transform.forward * speed * dashForce, ForceMode.Impulse);
-            //cambiar corutina dps
+            //cambiar
+            var dash = Instantiate(dashEffect, transform.position + transform.up.normalized, transform.rotation);
+            dash.SetActive(true);
+            dash.transform.parent = this.transform;
+            OnDash();
             StartCoroutine(VelocityToZero());
-            //animator + particula + skillnotready ui
         }
 
         dashInput = false;
@@ -199,7 +281,47 @@ public class PlayerModel : MonoBehaviour
         if (_canJump)
         {
             _canJump = false;
-            //ver eventos de animacion
+            _canMove = false;
+            jumping = true;
+            _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+
+            _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            Instantiate(smoke, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation);
+
+            OnJump();
+        }
+
+        jumpInput = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 9 && jumping)
+        {
+            Instantiate(expansion, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), transform.rotation);
+            Instantiate(crack, new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z), transform.rotation);
+            jumping = false;
+            Shake.instance.shake = 0.2f;
+            Shake.instance.shakeAmount = 0.2f;
+            //_rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            _canMove = true;
+            Landed();
+        }
+    }
+
+    public void Landed()
+    {
+        Vector3 explosionPos = transform.position;
+        Collider[] colliders = Physics.OverlapSphere(explosionPos, jumpRadius);
+        foreach (Collider hit in colliders)
+        {
+            Rigidbody colliderRb = hit.GetComponent<Rigidbody>();
+
+            if (colliderRb != null && hit.gameObject.layer == 10)
+            {
+                colliderRb.AddExplosionForce(jumpPower, transform.position, jumpRadius);
+                colliderRb.velocity = Vector3.zero;
+            }
         }
     }
 
@@ -241,31 +363,102 @@ public class PlayerModel : MonoBehaviour
     //rehacer weapons
     #region attack
 
-    private void StartSpecial()
+    public void Attack()
     {
-        _canMove = false;
-        OnIdle();//praticula
-        chargeValue -= 0.02f;
-        currentWeapon.StartSpecialAttack(str);
-
-        if (currentWeapon.specialDamage >= currentWeapon.TopSpecialDamage + str)
+        if (currentWeapon.allowAttack)
         {
-            EndSpecial();
+            if (_nextSlash)
+                _slashCounter++;
+
+            _nextSlash = true;
+            damage = str;
+
+            Vector3 vectRot;
+            Quaternion rot;
+            //cambiar
+            switch (_slashCounter)
+            {
+                case 0:
+                    Shake.instance.shake = 0.06f;
+                    Shake.instance.shakeAmount = 0.06f;
+                    vectRot = new Vector3(0, 0, 30);
+                    vectRot += transform.rotation.eulerAngles;
+                    rot = Quaternion.Euler(vectRot);
+                    currentWeapon.Attack(damage, transform.position + transform.forward.normalized / 1.2f + Vector3.up / 2, rot, 12);
+                    break;
+                case 1:
+                    Shake.instance.shake = 0.07f;
+                    Shake.instance.shakeAmount = 0.07f;
+                    vectRot = new Vector3(0, 0, 180);
+                    vectRot += transform.rotation.eulerAngles;
+                    rot = Quaternion.Euler(vectRot);
+                    currentWeapon.Attack(damage, transform.position + transform.forward.normalized * 1.2f + Vector3.up * 0.8f, rot, 12);
+                    break;
+                case 2:
+                    Shake.instance.shake = 0.09f;
+                    Shake.instance.shakeAmount = 0.09f;
+                    vectRot = new Vector3(0, 0, 20);
+                    vectRot += transform.rotation.eulerAngles;
+                    rot = Quaternion.Euler(vectRot);
+                    currentWeapon.Attack(damage, transform.position + transform.forward.normalized * 1.2f + Vector3.up, rot, 12);
+                    break;
+            }
+
+            OnAttack(_slashCounter);
         }
     }
 
-    private void EndSpecial()
+    void ComboTimerUpdate()
     {
-        chargeValue = 1;
-        _canMove = true;
-        OnSpecial();
-        StartCoroutine(ToIdle());
+        if (_nextSlash)
+        {
+            _currentComboTimer += Time.deltaTime;
+            if (_currentComboTimer >= comboSlashTimer)
+            {
+                _nextSlash = false;
+                _currentComboTimer = 0;
+            }
+        }else if(_slashCounter > 0)
+        {
+            _slashCounter = 0;
+            StartCoroutine(ToIdle());
+        }
+        
+    }
+
+    public void StartSpecial()
+    {
+        if(currentWeapon.hasSpecialAttack && currentWeapon.allowAttack)
+        {
+            _isCharging = true;
+            _canMove = false;
+            OnIdle(false);//praticula
+            chargeValue -= 0.02f;
+            currentWeapon.StartSpecialAttack(str);
+
+            if (currentWeapon.specialDamage >= currentWeapon.TopSpecialDamage + str)
+            {
+                EndSpecial();
+            }
+        }        
+    }
+
+    public void EndSpecial()
+    {
+        if (_isCharging)
+        {
+            _isCharging = false;
+            chargeValue = 1;
+            _canMove = true;
+            OnSpecial();
+            SpecialAttack();
+        }
     }
 
     IEnumerator ToIdle()
     {
         yield return new WaitForSeconds(0.1f);
-        OnIdle();
+        OnIdle(true);
     }
 
     public void SpecialAttack()
@@ -371,11 +564,11 @@ public class PlayerModel : MonoBehaviour
             currentWeapon = newWeapon;
         }
 
-        //fbClass.ChangeFeedback(currentWeapon);
+        fbClass.ChangeFeedback(currentWeapon);
         weaponUI.ReceiveWeapons(weapon1, weapon2, currentWeapon);
     }
 
-    void SwitchWeapon()
+    public void SwitchWeapon()
     {
         if (currentWeapon != null && weapon2 != null)
         {
@@ -391,7 +584,7 @@ public class PlayerModel : MonoBehaviour
                 weapon2.gameObject.SetActive(false);
                 currentWeapon = weapon1;
             }
-            //fbClass.ChangeFeedback(currentWeapon);
+            fbClass.ChangeFeedback(currentWeapon);
         }
         if (weaponUI != null)
             weaponUI.ReceiveWeapons(weapon1, weapon2, currentWeapon);
@@ -420,7 +613,7 @@ public class PlayerModel : MonoBehaviour
     //delete l8er
     IEnumerator ActivateDoors(GameObject go)
     {
-        //volver a idle
+        OnIdle(false);
         yield return new WaitForSeconds(1);
         if (go)
         {
