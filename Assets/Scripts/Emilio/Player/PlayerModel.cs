@@ -5,7 +5,7 @@ using System;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerView))]
-public class PlayerModel : MonoBehaviour
+public class PlayerModel : MonoBehaviour, IDamageable
 {
     public float maxHealth;
     internal float _health;
@@ -21,8 +21,8 @@ public class PlayerModel : MonoBehaviour
     #region Skills var
     public float dashForce;
     public float jumpForce;
-    bool _canDash;
-    bool _canJump;
+    bool _canDash = true;
+    bool _canJump = true;
     bool _canMove = true;
     public float dashCooldown;
     public float jumpCooldown;
@@ -96,6 +96,7 @@ public class PlayerModel : MonoBehaviour
     public GameObject crack;
     public Animator anim;
     private float combotime;
+    bool _isAttacking;
 
     void Start()
     {
@@ -120,6 +121,7 @@ public class PlayerModel : MonoBehaviour
         pauseText.gameObject.SetActive(false);
         healingParticle.gameObject.SetActive(false);
         anim = GetComponent<Animator>();
+        _slashCounter = 0;
     }    
 
     void Update()
@@ -154,7 +156,8 @@ public class PlayerModel : MonoBehaviour
             var velocity = (moveHorizontal + moveVertical).normalized * speed;
             _rb.velocity = new Vector3(velocity.x, _rb.velocity.y, velocity.z);
 
-            OnMove(_rb.velocity != Vector3.zero, Vector3.Angle(_rb.velocity, transform.forward) < 180);
+            OnMove(velocity != Vector3.zero, Vector3.SignedAngle(velocity, transform.forward, transform.up) < -90 || Vector3.SignedAngle(velocity, transform.forward, transform.up) > 90);
+            Debug.Log(Vector3.SignedAngle(velocity, transform.forward, transform.up));
         }
     }
 
@@ -310,6 +313,8 @@ public class PlayerModel : MonoBehaviour
             Shake.instance.shake = 0.2f;
             Shake.instance.shakeAmount = 0.2f;
             //_rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            _rb.velocity = Vector3.zero;
+            
             _canMove = true;
             Landed();
         }
@@ -371,42 +376,26 @@ public class PlayerModel : MonoBehaviour
 
     public void Attack()
     {
-        if (currentWeapon.allowAttack)
+        if (!_isAttacking)
         {
-            if (_nextSlash)
-                _slashCounter++;
+            _isAttacking = true;
 
-            _nextSlash = true;
             damage = str;
 
-            if (_slashCounter == 1)
+            if (_slashCounter == 0)
                 anim.SetTrigger("attack1");
-            if (_slashCounter == 2)
+            if (_slashCounter == 1)
                 anim.SetTrigger("attack2");
-            if (_slashCounter == 3)
+            if (_slashCounter == 2)
                 anim.SetTrigger("attack3");
-
-            /*
-            //cambiar
-            switch (_slashCounter)
-            {
-                case 0:
-                    
-                    break;
-                case 1:
-                    
-                    break;
-                case 2:
-                    
-                    break;
-            }*/
-
-            //OnAttack(_slashCounter);
         }
+            
+            
     }
 
     public void Attack1()
     {
+        _slashCounter = 1;
         combotime = comboSlashTimer;
         Vector3 vectRot;
         Quaternion rot;
@@ -421,6 +410,7 @@ public class PlayerModel : MonoBehaviour
 
     public void Attack2()
     {
+        _slashCounter = 2;
         combotime = comboSlashTimer;
         Vector3 vectRot;
         Quaternion rot;
@@ -435,6 +425,7 @@ public class PlayerModel : MonoBehaviour
 
     public void Attack3()
     {
+        _slashCounter = 0;
         combotime = comboSlashTimer;
         Vector3 vectRot;
         Quaternion rot;
@@ -503,6 +494,7 @@ public class PlayerModel : MonoBehaviour
     IEnumerator ToIdle()
     {
         yield return new WaitForSeconds(0.1f);
+        _isAttacking = false;
         OnIdle(true);
     }
 
