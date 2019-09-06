@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour, IDamageable
         life = maxLife;
         alertedSight = sight * 2;
 
-        target = FindObjectOfType<PlayerModel>().transform;
+        //target = FindObjectOfType<PlayerModel>().transform;
     }
 
     public void Patrol()

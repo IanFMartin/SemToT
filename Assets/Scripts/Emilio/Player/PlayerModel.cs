@@ -97,6 +97,8 @@ public class PlayerModel : MonoBehaviour, IDamageable
     public Animator anim;
     private float combotime;
     bool _isAttacking;
+    public SkillHUDController dashHudUI;
+    public SkillHUDController jumpHudUI;
 
     void Start()
     {
@@ -122,6 +124,8 @@ public class PlayerModel : MonoBehaviour, IDamageable
         healingParticle.gameObject.SetActive(false);
         anim = GetComponent<Animator>();
         _slashCounter = 0;
+        dashHudUI.SetHabilityCD(dashCooldown);
+        jumpHudUI.SetHabilityCD(jumpCooldown);
     }    
 
     void Update()
@@ -279,6 +283,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
             dash.SetActive(true);
             dash.transform.parent = this.transform;
             OnDash();
+            dashHudUI.SetCooldown(_currentDashCooldown);
             StartCoroutine(VelocityToZero());
         }
 
@@ -293,7 +298,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
             canMove = false;
             jumping = true;
             _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-
+            jumpHudUI.SetCooldown(_currentJumpCooldown);
             _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             Instantiate(smoke, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation);
 
