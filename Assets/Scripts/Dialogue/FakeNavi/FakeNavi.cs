@@ -13,10 +13,19 @@ public class FakeNavi : MonoBehaviour
     public DialogueManager DM;
     public Button[] naviButton;
     public int currentButton;
+    float curseDamage;
+    bool hasToFill;
+    PlayerLife pL;
+
 
     //Fake Navi Talk
     public void FNTalk()
     {
+        pL = player.GetComponent<PlayerLife>();
+        curseDamage = pL.curseDamage;
+        pL.curseDamage = 0;
+        hasToFill = pL.DontHasTofill;
+        pL.DontHasTofill = true;
         currentButton = 0;
         fakeNaviText.gameObject.SetActive(true);
         naviButton[0].gameObject.SetActive(true);
@@ -35,10 +44,12 @@ public class FakeNavi : MonoBehaviour
     }
     public void StopTalking()
     {
+        pL.DontHasTofill = hasToFill;
+        pL.curseDamage = curseDamage;
         DM.EndDialogue();
         foreach (var item in naviButton)
         {
-        item.gameObject.SetActive(false);
+            item.gameObject.SetActive(false);
         }
         player.GetComponent<PlayerController>().enabled = true;
         player.GetComponent<ChangeWeapon>().enabled = true;

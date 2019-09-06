@@ -14,6 +14,7 @@ public class Melee : Enemy
     float _prepTime;
     public float recoveryTime;
     public float maxPrepTime;
+    public float AnticipationTime;
     public ParticleSystem prepParticule;
 
     //delete l8er
@@ -72,7 +73,7 @@ public class Melee : Enemy
         {
             navMeshAgent.SetDestination(transform.position);
         };
-        
+
         stun.OnEnter += () => anim.SetTrigger("Stun");
         stun.OnUpdate += () => fsm.Feed(OnCondition.Idle);
 
@@ -93,10 +94,10 @@ public class Melee : Enemy
         attack.OnUpdate += () =>
         {
             _prepTime += Time.deltaTime;
-            if(_prepTime >= recoveryTime)
+            if (_prepTime >= recoveryTime)
             {
                 fsm.Feed(OnCondition.Idle);
-            }            
+            }
         };
 
         attack.OnExit += () =>
@@ -136,12 +137,12 @@ public class Melee : Enemy
             _prepTime += Time.deltaTime;
 
             //tiempo dps del frenado para prender la particula. delete cuando haya animacion de prep
-            if(_prepTime >= 0.3f && !_hasPlayParticle)
-            {
-                prepParticule.gameObject.SetActive(true);
-                prepParticule.Play();
-                _hasPlayParticle = true;
-            }
+            //if(_prepTime >= 0.3f && !_hasPlayParticle)
+            //{
+            //    prepParticule.gameObject.SetActive(true);
+            //    prepParticule.Play();
+            //    _hasPlayParticle = true;
+            //}
 
             if (_prepTime >= maxPrepTime)
             {
@@ -200,6 +201,18 @@ public class Melee : Enemy
         //fsm.Feed(OnCondition.Stun);
     }
 
+    // para darle anticipacion
+    public void StopEvent()
+    {
+        anim.speed = 0;
+        StartCoroutine(TimerToAttack());
+    }
+
+    IEnumerator TimerToAttack()
+    {
+        yield return new WaitForSeconds(AnticipationTime);
+        anim.speed = 1;
+    }
     public override void Die()
     {
         SpawnWeaponUnlocked();

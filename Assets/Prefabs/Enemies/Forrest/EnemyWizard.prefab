@@ -84,13 +84,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  maxLife: 200
+  maxLife: 100
   lerpSpeed: 0.025
   sight: 8
   alertedSight: 0
   alerted: 0
   range: 7
-  amountExpPerOrb: 16
+  amountExpPerOrb: 32
   healthBar: {fileID: 639403412479615852}
   damageParticle: {fileID: 1882414597540614, guid: 752fbfc51d9a18743a022538436ed1be,
     type: 3}
@@ -100,8 +100,9 @@ MonoBehaviour:
   dissolve: {fileID: 4800000, guid: 82a3e00ffe5ceb745aae5381783e42ae, type: 3}
   deadParticle: {fileID: 3187630490164388762, guid: cc84d2e75826bea48a9ad2befe075a13,
     type: 3}
-  recoveryTime: 1
+  recoveryTime: 0.1
   maxPrepTime: 1
+  AnticipationTime: 0.3
   prepParticule: {fileID: 6207121328235804256}
 --- !u!114 &1048676631502553079
 MonoBehaviour:
@@ -340,6 +341,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1145740176891386311}
     m_Modifications:
+    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
+        type: 3}
+      propertyPath: m_Name
+      value: Anticipation Particle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3877819826918424996, guid: e2bb385f801c87740999a843d6576da8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -395,16 +406,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
-        type: 3}
-      propertyPath: m_Name
-      value: Anticipation Particle
-      objectReference: {fileID: 0}
-    - target: {fileID: 3877819826918424999, guid: e2bb385f801c87740999a843d6576da8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2bb385f801c87740999a843d6576da8, type: 3}
 --- !u!4 &6207121328235804262 stripped
@@ -426,6 +427,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1145740176891386311}
     m_Modifications:
+    - target: {fileID: 100132, guid: dba8fb1766c6d6144abc0642eb752ade, type: 3}
+      propertyPath: m_Name
+      value: Zombie Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 100132, guid: dba8fb1766c6d6144abc0642eb752ade, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: dba8fb1766c6d6144abc0642eb752ade, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.02
@@ -470,14 +479,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100132, guid: dba8fb1766c6d6144abc0642eb752ade, type: 3}
-      propertyPath: m_Name
-      value: Zombie Idle
-      objectReference: {fileID: 0}
-    - target: {fileID: 100132, guid: dba8fb1766c6d6144abc0642eb752ade, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: dba8fb1766c6d6144abc0642eb752ade, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -501,6 +502,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1145740176891386311}
     m_Modifications:
+    - target: {fileID: 100002, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
+      propertyPath: m_Name
+      value: GolemIdle
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -557,10 +562,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.2254
       objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
-      propertyPath: m_Name
-      value: GolemIdle
-      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -586,25 +587,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8174408160505530981}
     m_Modifications:
+    - target: {fileID: 518386812355574523, guid: a4f8a4c5282642542a0f144d4ede3c3e,
+        type: 3}
+      propertyPath: m_Name
+      value: Staff
+      objectReference: {fileID: 0}
     - target: {fileID: 2965914300873434197, guid: a4f8a4c5282642542a0f144d4ede3c3e,
         type: 3}
       propertyPath: rateOfFire
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2965914300873434197, guid: a4f8a4c5282642542a0f144d4ede3c3e,
         type: 3}
       propertyPath: damage
-      value: 140
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2965914300873434197, guid: a4f8a4c5282642542a0f144d4ede3c3e,
         type: 3}
       propertyPath: dropped
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 518386812355574523, guid: a4f8a4c5282642542a0f144d4ede3c3e,
-        type: 3}
-      propertyPath: m_Name
-      value: Staff
       objectReference: {fileID: 0}
     - target: {fileID: 518386812355574520, guid: a4f8a4c5282642542a0f144d4ede3c3e,
         type: 3}

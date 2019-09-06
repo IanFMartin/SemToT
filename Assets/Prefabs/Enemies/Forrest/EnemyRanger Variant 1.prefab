@@ -90,7 +90,7 @@ MonoBehaviour:
   alertedSight: 0
   alerted: 0
   range: 6
-  amountExpPerOrb: 8
+  amountExpPerOrb: 16
   healthBar: {fileID: 8773818719467116973}
   damageParticle: {fileID: 1882414597540614, guid: 752fbfc51d9a18743a022538436ed1be,
     type: 3}
@@ -100,8 +100,9 @@ MonoBehaviour:
   dissolve: {fileID: 4800000, guid: 82a3e00ffe5ceb745aae5381783e42ae, type: 3}
   deadParticle: {fileID: 3187630490164388762, guid: cc84d2e75826bea48a9ad2befe075a13,
     type: 3}
-  recoveryTime: 1
+  recoveryTime: 0.1
   maxPrepTime: 1
+  AnticipationTime: 0.3
   prepParticule: {fileID: 1538315583837914581}
 --- !u!114 &1603770712039458212
 MonoBehaviour:

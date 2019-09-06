@@ -13,10 +13,12 @@ public class SkeletonBoss : Enemy
 
     public GameObject[] Special1AboveSpawnPoints;
     public GameObject[] Special1LeftSpawnPoints;
+    public GameObject[] barrier;
     public GameObject prefabBullet;
     public GameObject bulletHolder;
     public GameObject prefabSlash;
     public GameObject redCircle;
+    public GameObject prefabPortal;
     public ParticleSystem prefabExplosion;
     public Transform SlashHolder;
     public int radiusToDetect;
@@ -47,11 +49,6 @@ public class SkeletonBoss : Enemy
     bool AlreadyPhase3;
     float timerBetweenShoots;
 
-    //perdon que puse esto aca. pero me dio mucha paja hacerlo abajo. 
-    public void DestroyThis()
-    {
-        Destroy(gameObject);
-    }
     void Start()
     {
         SW = new SpawnWeapon();
@@ -153,7 +150,7 @@ public class SkeletonBoss : Enemy
         };
         scream.OnUpdate += () =>
         {
-           
+
             if (CanUseSpecial)
             {
 
@@ -222,7 +219,7 @@ public class SkeletonBoss : Enemy
 
         special3.OnExit += () =>
         {
-            
+
             CanUseSpecial = false;
             timerSpecial3 = 20;
         };
@@ -235,7 +232,6 @@ public class SkeletonBoss : Enemy
 
         attack.OnUpdate += () =>
         {
-            print(timerToAttack);
             if (timerToAttack > 0)
             {
                 fsm.Feed(OnCondition.Idle);
@@ -305,15 +301,12 @@ public class SkeletonBoss : Enemy
 
         Timer();
 
- 
+
         if (Input.GetKeyDown(KeyCode.L))
         {
-            fsm.Feed(OnCondition.Die);
+            DestroyThis();
         }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Special2();
-        }
+       
     }
     public enum OnCondition
     {
@@ -517,14 +510,28 @@ public class SkeletonBoss : Enemy
 
         }
     }
-    void OnDrawGizmos()
+    public void SummonPortal()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radiusToDetect);
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, radiusToPersuit);
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, radiusToAttack);
+        foreach (var tree in barrier)
+        {
+            tree.SetActive(false);
+        }
+        prefabPortal.SetActive(true);
     }
+    public void DestroyThis()
+    {
+        healthbar.enabled = false;
+        SummonPortal();
+        Destroy(gameObject);
+    }
+    //void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(transform.position, radiusToDetect);
+    //    Gizmos.color = Color.blue;
+    //    Gizmos.DrawWireSphere(transform.position, radiusToPersuit);
+    //    Gizmos.color = Color.green;
+    //    Gizmos.DrawWireSphere(transform.position, radiusToAttack);
+    //}
 
 }
