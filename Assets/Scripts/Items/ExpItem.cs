@@ -20,7 +20,7 @@ public class ExpItem : Item
     public override void MyActionLoot(Transform t)
     {
         expController.GetExp(exp);
-        t.GetComponent<PlayerLife>().TakeDamage(-1, true);
+        t.GetComponent<PlayerModel>().TakeDamage(-1, true);
         OnParticleDeath(this);
     }
 }
