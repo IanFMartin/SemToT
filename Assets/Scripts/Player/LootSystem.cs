@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class LootSystem : MonoBehaviour
 {
-    public PlayerController player;
+    public PlayerModel player;
     internal List<Collider> grabbables = new List<Collider>();
     public Canvas grabCanvas;
     private Transform posGrab;
 
     private void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerModel>();
     }
 
     private void Update()

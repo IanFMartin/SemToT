@@ -94,6 +94,8 @@ public class PlayerModel : MonoBehaviour
     public GameObject smoke;
     public GameObject expansion;
     public GameObject crack;
+    public Animator anim;
+    private float combotime;
 
     void Start()
     {
@@ -117,13 +119,15 @@ public class PlayerModel : MonoBehaviour
         _isPaused = false;
         pauseText.gameObject.SetActive(false);
         healingParticle.gameObject.SetActive(false);
+        anim = GetComponent<Animator>();
     }    
 
     void Update()
     {
         DashCooldown();
         JumpCooldown();
-        ComboTimerUpdate();
+        //ComboTimerUpdate();
+        CombosTimer();
         _currentController.OnUpdate();
 
         //pausa
@@ -142,6 +146,8 @@ public class PlayerModel : MonoBehaviour
     {
         if (_canMove)
         {
+            MouseMovement();
+
             Vector3 moveHorizontal = Vector3.right * hAxis;
             Vector3 moveVertical = Vector3.forward * vAxis;
 
@@ -373,41 +379,74 @@ public class PlayerModel : MonoBehaviour
             _nextSlash = true;
             damage = str;
 
-            Vector3 vectRot;
-            Quaternion rot;
+            if (_slashCounter == 1)
+                anim.SetTrigger("attack1");
+            if (_slashCounter == 2)
+                anim.SetTrigger("attack2");
+            if (_slashCounter == 3)
+                anim.SetTrigger("attack3");
+
+            /*
             //cambiar
             switch (_slashCounter)
             {
                 case 0:
-                    Shake.instance.shake = 0.06f;
-                    Shake.instance.shakeAmount = 0.06f;
-                    vectRot = new Vector3(0, 0, 30);
-                    vectRot += transform.rotation.eulerAngles;
-                    rot = Quaternion.Euler(vectRot);
-                    currentWeapon.Attack(damage, transform.position + transform.forward.normalized / 1.2f + Vector3.up / 2, rot, 12);
+                    
                     break;
                 case 1:
-                    Shake.instance.shake = 0.07f;
-                    Shake.instance.shakeAmount = 0.07f;
-                    vectRot = new Vector3(0, 0, 180);
-                    vectRot += transform.rotation.eulerAngles;
-                    rot = Quaternion.Euler(vectRot);
-                    currentWeapon.Attack(damage, transform.position + transform.forward.normalized * 1.2f + Vector3.up * 0.8f, rot, 12);
+                    
                     break;
                 case 2:
-                    Shake.instance.shake = 0.09f;
-                    Shake.instance.shakeAmount = 0.09f;
-                    vectRot = new Vector3(0, 0, 20);
-                    vectRot += transform.rotation.eulerAngles;
-                    rot = Quaternion.Euler(vectRot);
-                    currentWeapon.Attack(damage, transform.position + transform.forward.normalized * 1.2f + Vector3.up, rot, 12);
+                    
                     break;
-            }
+            }*/
 
-            OnAttack(_slashCounter);
+            //OnAttack(_slashCounter);
         }
     }
 
+    public void Attack1()
+    {
+        combotime = comboSlashTimer;
+        Vector3 vectRot;
+        Quaternion rot;
+        Shake.instance.shake = 0.06f;
+        Shake.instance.shakeAmount = 0.06f;
+        vectRot = new Vector3(0, 0, 30);
+        vectRot += transform.rotation.eulerAngles;
+        rot = Quaternion.Euler(vectRot);
+        currentWeapon.Attack(damage, transform.position + transform.forward.normalized / 1.2f + Vector3.up / 2, rot, 12);
+        StartCoroutine(ToIdle());
+    }
+
+    public void Attack2()
+    {
+        combotime = comboSlashTimer;
+        Vector3 vectRot;
+        Quaternion rot;
+        Shake.instance.shake = 0.07f;
+        Shake.instance.shakeAmount = 0.07f;
+        vectRot = new Vector3(0, 0, 180);
+        vectRot += transform.rotation.eulerAngles;
+        rot = Quaternion.Euler(vectRot);
+        currentWeapon.Attack(damage, transform.position + transform.forward.normalized * 1.2f + Vector3.up * 0.8f, rot, 12);
+        StartCoroutine(ToIdle());
+    }
+
+    public void Attack3()
+    {
+        combotime = comboSlashTimer;
+        Vector3 vectRot;
+        Quaternion rot;
+        Shake.instance.shake = 0.09f;
+        Shake.instance.shakeAmount = 0.09f;
+        vectRot = new Vector3(0, 0, 20);
+        vectRot += transform.rotation.eulerAngles;
+        rot = Quaternion.Euler(vectRot);
+        currentWeapon.Attack(damage, transform.position + transform.forward.normalized * 1.2f + Vector3.up, rot, 12);
+        StartCoroutine(ToIdle());
+    }
+    /*
     void ComboTimerUpdate()
     {
         if (_nextSlash)
@@ -421,9 +460,15 @@ public class PlayerModel : MonoBehaviour
         }else if(_slashCounter > 0)
         {
             _slashCounter = 0;
-            StartCoroutine(ToIdle());
+            //StartCoroutine(ToIdle());
         }
         
+    }*/
+
+    private void CombosTimer()
+    {
+        if (combotime > 0) combotime -= Time.deltaTime;
+        else _slashCounter = 0;
     }
 
     public void StartSpecial()

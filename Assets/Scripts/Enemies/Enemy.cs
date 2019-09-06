@@ -42,6 +42,8 @@ public class Enemy : MonoBehaviour, IDamageable
         anim = GetComponentInChildren<Animator>();
         life = maxLife;
         alertedSight = sight * 2;
+
+        target = FindObjectOfType<PlayerModel>().transform;
     }
 
     public void Patrol()
