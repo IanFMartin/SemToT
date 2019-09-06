@@ -96,15 +96,19 @@ public class SkeletonBoss : Enemy
 
         special1.AddTransition(OnCondition.Idle, idle);
         special1.AddTransition(OnCondition.Die, die);
+        special1.AddTransition(OnCondition.ChangePhase, changePhase);
 
         special2.AddTransition(OnCondition.Idle, idle);
         special2.AddTransition(OnCondition.Die, die);
+        special2.AddTransition(OnCondition.ChangePhase, changePhase);
 
         special3.AddTransition(OnCondition.Idle, idle);
         special3.AddTransition(OnCondition.Die, die);
+        special3.AddTransition(OnCondition.ChangePhase, changePhase);
 
         attack.AddTransition(OnCondition.Idle, idle);
         attack.AddTransition(OnCondition.Die, die);
+        attack.AddTransition(OnCondition.ChangePhase, changePhase);
 
         persuit.AddTransition(OnCondition.Idle, idle);
         persuit.AddTransition(OnCondition.Attack, attack);
@@ -135,7 +139,6 @@ public class SkeletonBoss : Enemy
         };
         show.OnEnter += () =>
         {
-            print("no se porque no funciona");
             anim.Play("Explode");
         };
         changePhase.OnEnter += () =>
@@ -195,9 +198,15 @@ public class SkeletonBoss : Enemy
         special2.OnEnter += () =>
         {
             Special2();
-            StartCoroutine(TimerToIdle(1));
+            StartCoroutine(TimerToIdle(2));
         };
-
+        special2.OnUpdate += () =>
+        {
+            if (Vector3.Distance(target.transform.position, transform.position) < radiusToDetect)
+            {
+                transform.LookAt(target);
+            }
+        };
         special2.OnExit += () =>
         {
 
@@ -303,7 +312,7 @@ public class SkeletonBoss : Enemy
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
-            Special3();
+            Special2();
         }
     }
     public enum OnCondition
@@ -473,10 +482,10 @@ public class SkeletonBoss : Enemy
     }
     IEnumerator Explode()
     {
+        yield return new WaitForSeconds(1);
         prefabExplosion.Play();
         int layerMask = ~(1 << 10);
         var explosionRadius = Physics.OverlapSphere(transform.position, 4, layerMask);
-        yield return new WaitForSeconds(1);
         if (explosionRadius.Any(x => x.GetComponent<PlayerLife>()))
         {
             var player = explosionRadius.Where(x => x.GetComponent<PlayerLife>()).First();
