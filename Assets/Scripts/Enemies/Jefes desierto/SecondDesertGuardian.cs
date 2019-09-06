@@ -28,11 +28,11 @@ public class SecondDesertGuardian : Enemy, IBoss
     public WeaponTable wT;
     private SpawnWeapon SW;
     public Shader dissolve;
+    public List<Weapon> dropList = new List<Weapon>();
     public GameObject deadParticle;
     private ExpParticlesPool xpPool;
     private ExpController expController;
 
-    public List<Weapon> dropList = new List<Weapon>();
     public List<float> dropChanceList = new List<float>();
     private Dictionary<int, float> DicToUseInDrop = new Dictionary<int, float>();
 

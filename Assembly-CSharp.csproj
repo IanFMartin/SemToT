@@ -64,6 +64,7 @@
     <Compile Include="Assets\Arte\MagicMirror\Prefab\MirrorCameraScript.cs" />
     <Compile Include="Assets\Arte\MagicMirror\Prefab\MirrorReflectionScript.cs" />
     <Compile Include="Assets\Arte\MagicMirror\Prefab\MirrorScript.cs" />
+    <Compile Include="Assets\BossShow.cs" />
     <Compile Include="Assets\Scripts\AddNumberStat.cs" />
     <Compile Include="Assets\Scripts\BarrierActivation.cs" />
     <Compile Include="Assets\Scripts\BerriesBush.cs" />
@@ -166,6 +167,8 @@
     <Compile Include="Assets\Scripts\WeaponsBtwLevels.cs" />
     <Compile Include="Assets\Scripts\WeaponTable.cs" />
     <Compile Include="Assets\Scripts\WindowsHelperAccessibilityKeys.cs" />
+    <Compile Include="Assets\SkeletonBoss.cs" />
+    <Compile Include="Assets\SkeletonBullet.cs" />
     <None Include="Assets\Arte\MagicMirror\Prefab\MirrorShaderOld.shader" />
     <None Include="Assets\Arte\Assets Borrowed\CactusPack\Shaders\VertexBlend.shader" />
     <None Include="Assets\Arte\MagicMirror\Prefab\MirrorShaderBumpMap.shader" />

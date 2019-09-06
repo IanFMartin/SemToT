@@ -3041,6 +3041,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 726051722402315275}
     m_Modifications:
+    - target: {fileID: 1834672607448398516, guid: fd8f914c899f7724187bb2de209a342b,
+        type: 3}
+      propertyPath: m_Name
+      value: GolemIdle
+      objectReference: {fileID: 0}
     - target: {fileID: 460108282217415639, guid: fd8f914c899f7724187bb2de209a342b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3110,11 +3115,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.0834
-      objectReference: {fileID: 0}
-    - target: {fileID: 1834672607448398516, guid: fd8f914c899f7724187bb2de209a342b,
-        type: 3}
-      propertyPath: m_Name
-      value: GolemIdle
       objectReference: {fileID: 0}
     - target: {fileID: 3252655733249818759, guid: fd8f914c899f7724187bb2de209a342b,
         type: 3}

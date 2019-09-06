@@ -2864,6 +2864,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RectAlert runSkill
       objectReference: {fileID: 0}
+    - target: {fileID: 7916016278700565389, guid: 6de2de48d87c003439f9dba6ce3b00b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5569337687802831952, guid: 6de2de48d87c003439f9dba6ce3b00b4,
         type: 3}
       propertyPath: m_LocalPosition.x

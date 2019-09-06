@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3241914932258052923}
   - component: {fileID: 8318348142147121004}
+  - component: {fileID: 4811830961773550112}
   m_Layer: 0
   m_Name: Skeleton@Skin
   m_TagString: Untagged
@@ -84,6 +85,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &4811830961773550112
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132127465876336818}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.02155578
+  m_Height: 0.16076349
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.07581126, z: 0}
 --- !u!1 &435735669761825556
 GameObject:
   m_ObjectHideFlags: 0
