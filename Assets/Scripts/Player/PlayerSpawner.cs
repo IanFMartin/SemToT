@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour
 {
-    public PlayerLife playerLife;
+    public PlayerModel playerLife;
     public GameObject deadSoul;
     public GameObject deadParticle;
     public Animator anim;

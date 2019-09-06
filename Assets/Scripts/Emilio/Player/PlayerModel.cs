@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PlayerModel : MonoBehaviour
 {
     public float maxHealth;
-    float _health;
+    internal float _health;
     public float speed;
     public float rotationSpeed;
     Rigidbody _rb;

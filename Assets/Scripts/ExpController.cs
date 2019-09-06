@@ -12,7 +12,7 @@ public class ExpController : MonoBehaviour
     public AddNumberStat lifeStat;
     public AddNumberStat strStat;
     public AddNumberStat dexStat;
-    private PlayerLife player;
+    private PlayerModel player;
     private AudioSource audioSource;
     public AudioClip lvlUpClip;
 
@@ -102,14 +102,14 @@ public class ExpController : MonoBehaviour
 
     private void InitialLevelUp(int level)
     {
-        var changeweapon = player.GetComponent<ChangeWeapon>();
+        var changeweapon = player;
         for (int i = 0; i < level; i++)
         {
             lifeStat.stat += 10;
             strStat.stat += 10;
             dexStat.stat += 10;
 
-            player.UpdateMaxLife(player.maxLife + 10 * 25f);
+            //player.UpdateMaxLife(player.maxLife + 10 * 25f);
             changeweapon.str += 5;
             changeweapon.dex += 5;
             maxExp *= expFactor;
@@ -140,7 +140,7 @@ public class ExpController : MonoBehaviour
             levlUpPanel.SetActive(true);
             timeToFade = 0;
 
-            player.UpdateMaxLife(player.maxLife + 10 * 25f);
+            //player.UpdateMaxLife(player.maxLife + 10 * 25f);
             player.GetComponent<ChangeWeapon>().str += 10;
             player.GetComponent<ChangeWeapon>().dex += 10;
             StaticData.level++;
