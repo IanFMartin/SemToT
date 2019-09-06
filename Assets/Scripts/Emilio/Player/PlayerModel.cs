@@ -109,7 +109,7 @@ public class PlayerModel : MonoBehaviour
         if (weapon2 != null)
             weapon2.gameObject.SetActive(false);
 
-        fbClass = GetComponentInChildren<ClassChangeFeedback>();
+        fbClass = GetComponent<ClassChangeFeedback>();
         LoadWeapons();
         fbClass.ChangeFeedback(currentWeapon);
 
