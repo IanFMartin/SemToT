@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 2151148640613136246, guid: f0adb812955bbf843849c51be7753c16,
     type: 3}
-  speed: 0.3
+  speed: 0.5
   dmg: 300
   myLayer: 10
   timeAlive: 2.5

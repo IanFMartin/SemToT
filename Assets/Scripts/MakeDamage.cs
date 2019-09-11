@@ -10,6 +10,7 @@ public class MakeDamage : MonoBehaviour
     {
         if (other.GetComponent<IDamageable>() != null && other.gameObject.layer != myLayer)
         {
+            print(other.gameObject.name);
             Instantiate(hitParticle, transform.position, Quaternion.identity);
             other.GetComponent<IDamageable>().TakeDamage(dmg, false);
         }

@@ -7,8 +7,6 @@ public class PlayerSpawner : MonoBehaviour
     public GameObject deadSoul;
     public GameObject deadParticle;
     public Animator anim;
-    public FakeNavi fN;
-    public int ActualLevel;
 
     private void Start()
     {
@@ -23,31 +21,6 @@ public class PlayerSpawner : MonoBehaviour
         yield return new WaitForSeconds(1);
         playerLife.gameObject.SetActive(true);
         Destroy(a);
-        if(ActualLevel == 0)
-        {
-        if (!EventsFakeNavi.FirstTimeEntrance && fN != null)
-        {
-            fN.FNTalk();
-            EventsFakeNavi.FirstTimeEntrance = true;
-        }
-        }else if (ActualLevel == 1)
-        {
-            if (!EventsFakeNavi.FirstTimeInTheWoods && fN != null)
-            {
-                fN.FNTalk();
-                EventsFakeNavi.FirstTimeInTheWoods = true;
-            }
-        }
-        else if (ActualLevel == 2)
-        {
-            if (!EventsFakeNavi.FirstTimeInTheBoss && fN != null)
-            {
-                fN.FNTalk();
-                EventsFakeNavi.FirstTimeInTheBoss = true;
-            }
-        }
-
-
     }
 
     public void Respawn()
