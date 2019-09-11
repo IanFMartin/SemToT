@@ -25,9 +25,9 @@ public class Portal : MonoBehaviour
 
     private void OnCollisionStay(Collision col)
     {
-        if (col.gameObject.GetComponent<PlayerModel>() != null)
+        if (col.gameObject.GetComponent<PlayerController>() != null)
         {
-            var pc = col.gameObject.GetComponent<PlayerModel>();
+            var pc = col.gameObject.GetComponent<PlayerController>();
             col.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             player = pc.gameObject;
             pc.canMove = false;

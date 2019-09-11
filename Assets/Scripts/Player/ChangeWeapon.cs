@@ -170,7 +170,6 @@ public class ChangeWeapon : MonoBehaviour
 
     public void Attack()
     {
-        Debug.Log("hola");
         combotime = 0.5f;
         Shake.instance.shake = 0.06f;
         Shake.instance.shakeAmount = 0.06f;

@@ -37,7 +37,6 @@ public class PlayerView : MonoBehaviour
     public void OnAttack(int slashNumbr)
     {
         //particulas?
-        slashNumbr++;
         _myAnim.SetInteger("Slash", slashNumbr);
     }
 

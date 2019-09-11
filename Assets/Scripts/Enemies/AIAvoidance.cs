@@ -48,7 +48,7 @@ public class AIAvoidance : MonoBehaviour
         hero.AddRange(Physics.OverlapSphere(transform.position, myBehavoiur.sight, playerLayer));
         if (hero.Count > 0)
         {
-            myBehavoiur.target = FindObjectOfType<PlayerModel>().transform;
+            myBehavoiur.target = FindObjectOfType<PlayerLife>().transform;
         }
         else
         {

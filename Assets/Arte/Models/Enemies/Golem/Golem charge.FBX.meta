@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: 8ed59e63f2c9fb44c8d5809b853f6bd6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Golem
+    100002: GolemRigCabeza
+    100004: GolemRigCuello1
+    100006: GolemRigCuello2
+    100008: GolemRigEspalda1
+    100010: GolemRigEspalda2
+    100012: GolemRigEspalda3
+    100014: GolemRigLeftArm1
+    100016: GolemRigLeftArm2
+    100018: GolemRigLeftArmDigit11
+    100020: GolemRigLeftArmDigit12
+    100022: GolemRigLeftArmDigit21
+    100024: GolemRigLeftArmDigit22
+    100026: GolemRigLeftArmDigit31
+    100028: GolemRigLeftArmDigit32
+    100030: GolemRigLeftArmDigit41
+    100032: GolemRigLeftArmDigit42
+    100034: GolemRigLeftArmPalm
+    100036: GolemRigLeftLeg1
+    100038: GolemRigLeftLeg2
+    100040: GolemRigLeftLegAnkle
+    100042: GolemRigLeftLegDigit11
+    100044: GolemRigPecho
+    100046: GolemRigPelvis
+    100048: GolemRigRightArm1
+    100050: GolemRigRightArm2
+    100052: GolemRigRightArmDigit11
+    100054: GolemRigRightArmDigit12
+    100056: GolemRigRightArmDigit21
+    100058: GolemRigRightArmDigit22
+    100060: GolemRigRightArmDigit31
+    100062: GolemRigRightArmDigit32
+    100064: GolemRigRightArmDigit41
+    100066: GolemRigRightArmDigit42
+    100068: GolemRigRightArmPalm
+    100070: GolemRigRightLeg1
+    100072: GolemRigRightLeg2
+    100074: GolemRigRightLegAnkle
+    100076: GolemRigRightLegDigit11
+    100078: //RootNode
+    400000: Golem
+    400002: GolemRigCabeza
+    400004: GolemRigCuello1
+    400006: GolemRigCuello2
+    400008: GolemRigEspalda1
+    400010: GolemRigEspalda2
+    400012: GolemRigEspalda3
+    400014: GolemRigLeftArm1
+    400016: GolemRigLeftArm2
+    400018: GolemRigLeftArmDigit11
+    400020: GolemRigLeftArmDigit12
+    400022: GolemRigLeftArmDigit21
+    400024: GolemRigLeftArmDigit22
+    400026: GolemRigLeftArmDigit31
+    400028: GolemRigLeftArmDigit32
+    400030: GolemRigLeftArmDigit41
+    400032: GolemRigLeftArmDigit42
+    400034: GolemRigLeftArmPalm
+    400036: GolemRigLeftLeg1
+    400038: GolemRigLeftLeg2
+    400040: GolemRigLeftLegAnkle
+    400042: GolemRigLeftLegDigit11
+    400044: GolemRigPecho
+    400046: GolemRigPelvis
+    400048: GolemRigRightArm1
+    400050: GolemRigRightArm2
+    400052: GolemRigRightArmDigit11
+    400054: GolemRigRightArmDigit12
+    400056: GolemRigRightArmDigit21
+    400058: GolemRigRightArmDigit22
+    400060: GolemRigRightArmDigit31
+    400062: GolemRigRightArmDigit32
+    400064: GolemRigRightArmDigit41
+    400066: GolemRigRightArmDigit42
+    400068: GolemRigRightArmPalm
+    400070: GolemRigRightLeg1
+    400072: GolemRigRightLeg2
+    400074: GolemRigRightLegAnkle
+    400076: GolemRigRightLegDigit11
+    400078: //RootNode
+    2100000: No Name
+    4300000: Golem
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Golem
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

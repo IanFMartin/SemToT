@@ -7,7 +7,7 @@ public class TowerEntryUI : MonoBehaviour
 {
 
     public ParticleSystem ImplosionCurseParticle;
-    public PlayerModel _target;
+    public PlayerController _target;
     public Image curseClock;
 
     private void Start()
@@ -20,7 +20,7 @@ public class TowerEntryUI : MonoBehaviour
         curseClock.gameObject.SetActive(true);
         Instantiate(ImplosionCurseParticle, _target.transform.position, _target.transform.rotation);
         _target.canMove = false;
-        _target.ToIdle2();
+        _target.ToIdle();
         StartCoroutine(CursingCorrutine());
     }
     IEnumerator CursingCorrutine()

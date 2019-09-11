@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class UILife : MonoBehaviour
 {
-    public PlayerModel playerLife;
+    public PlayerLife playerLife;
     public Image topHealthBar;
     public Image curseClock;
     public Text txtClock;
 
     public void ShowLife(float life)
     {
-        topHealthBar.fillAmount = playerLife._health / playerLife.maxHealth;
+        topHealthBar.fillAmount = playerLife.life / playerLife.maxLife;
 
         /*
         if (healthBar.fillAmount >= 0.66f)
@@ -26,14 +26,14 @@ public class UILife : MonoBehaviour
     }
     public void CurseTimeUpdate()
     {
-        //var curse = playerLife.curseTime;
-        //curseClock.fillAmount = curse / playerLife.maxCurseTime;
-        //float segs = curse % 60;
-        //int minutes = Mathf.RoundToInt((curse - segs) / 60);
-        //string txtSegs = segs.ToString();
-        //if (segs < 10)
-        //    txtSegs = 0.ToString() + segs.ToString();
-        //txtClock.text = minutes.ToString() + ":" + txtSegs;
+        var curse = playerLife.curseTime;
+        curseClock.fillAmount = curse / playerLife.maxCurseTime;
+        float segs = curse % 60;
+        int minutes = Mathf.RoundToInt((curse - segs) / 60);
+        string txtSegs = segs.ToString();
+        if (segs < 10)
+            txtSegs = 0.ToString() + segs.ToString();
+        txtClock.text = minutes.ToString() + ":" + txtSegs;
     }
 }
 

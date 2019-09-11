@@ -5,10 +5,10 @@ using System;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerView))]
-public class PlayerModel : MonoBehaviour, IDamageable
+public class PlayerModel : MonoBehaviour
 {
     public float maxHealth;
-    internal float _health;
+    float _health;
     public float speed;
     public float rotationSpeed;
     Rigidbody _rb;
@@ -21,9 +21,9 @@ public class PlayerModel : MonoBehaviour, IDamageable
     #region Skills var
     public float dashForce;
     public float jumpForce;
-    bool _canDash = true;
-    bool _canJump = true;
-    public bool canMove = true;
+    bool _canDash;
+    bool _canJump;
+    bool _canMove = true;
     public float dashCooldown;
     public float jumpCooldown;
     float _currentDashCooldown;
@@ -94,11 +94,6 @@ public class PlayerModel : MonoBehaviour, IDamageable
     public GameObject smoke;
     public GameObject expansion;
     public GameObject crack;
-    public Animator anim;
-    private float combotime;
-    bool _isAttacking;
-    public SkillHUDController dashHudUI;
-    public SkillHUDController jumpHudUI;
 
     void Start()
     {
@@ -122,18 +117,13 @@ public class PlayerModel : MonoBehaviour, IDamageable
         _isPaused = false;
         pauseText.gameObject.SetActive(false);
         healingParticle.gameObject.SetActive(false);
-        anim = GetComponent<Animator>();
-        _slashCounter = 0;
-        dashHudUI.SetHabilityCD(dashCooldown);
-        jumpHudUI.SetHabilityCD(jumpCooldown);
     }    
 
     void Update()
     {
         DashCooldown();
         JumpCooldown();
-        //ComboTimerUpdate();
-        CombosTimer();
+        ComboTimerUpdate();
         _currentController.OnUpdate();
 
         //pausa
@@ -150,18 +140,15 @@ public class PlayerModel : MonoBehaviour, IDamageable
 
     public void Move(float hAxis, float vAxis)
     {
-        if (canMove)
+        if (_canMove)
         {
-            MouseMovement();
-
             Vector3 moveHorizontal = Vector3.right * hAxis;
             Vector3 moveVertical = Vector3.forward * vAxis;
 
             var velocity = (moveHorizontal + moveVertical).normalized * speed;
             _rb.velocity = new Vector3(velocity.x, _rb.velocity.y, velocity.z);
 
-            OnMove(velocity != Vector3.zero, Vector3.SignedAngle(velocity, transform.forward, transform.up) < -90 || Vector3.SignedAngle(velocity, transform.forward, transform.up) > 90);
-
+            OnMove(_rb.velocity != Vector3.zero, Vector3.Angle(_rb.velocity, transform.forward) < 180);
         }
     }
 
@@ -283,7 +270,6 @@ public class PlayerModel : MonoBehaviour, IDamageable
             dash.SetActive(true);
             dash.transform.parent = this.transform;
             OnDash();
-            dashHudUI.SetCooldown(_currentDashCooldown);
             StartCoroutine(VelocityToZero());
         }
 
@@ -295,10 +281,10 @@ public class PlayerModel : MonoBehaviour, IDamageable
         if (_canJump)
         {
             _canJump = false;
-            canMove = false;
+            _canMove = false;
             jumping = true;
             _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-            jumpHudUI.SetCooldown(_currentJumpCooldown);
+
             _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             Instantiate(smoke, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation);
 
@@ -318,9 +304,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
             Shake.instance.shake = 0.2f;
             Shake.instance.shakeAmount = 0.2f;
             //_rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-            _rb.velocity = Vector3.zero;
-            
-            canMove = true;
+            _canMove = true;
             Landed();
         }
     }
@@ -381,68 +365,49 @@ public class PlayerModel : MonoBehaviour, IDamageable
 
     public void Attack()
     {
-        if (!_isAttacking)
+        if (currentWeapon.allowAttack)
         {
-            _isAttacking = true;
+            if (_nextSlash)
+                _slashCounter++;
 
+            _nextSlash = true;
             damage = str;
 
-            if (_slashCounter == 0)
-                anim.SetTrigger("attack1");
-            if (_slashCounter == 1)
-                anim.SetTrigger("attack2");
-            if (_slashCounter == 2)
-                anim.SetTrigger("attack3");
+            Vector3 vectRot;
+            Quaternion rot;
+            //cambiar
+            switch (_slashCounter)
+            {
+                case 0:
+                    Shake.instance.shake = 0.06f;
+                    Shake.instance.shakeAmount = 0.06f;
+                    vectRot = new Vector3(0, 0, 30);
+                    vectRot += transform.rotation.eulerAngles;
+                    rot = Quaternion.Euler(vectRot);
+                    currentWeapon.Attack(damage, transform.position + transform.forward.normalized / 1.2f + Vector3.up / 2, rot, 12);
+                    break;
+                case 1:
+                    Shake.instance.shake = 0.07f;
+                    Shake.instance.shakeAmount = 0.07f;
+                    vectRot = new Vector3(0, 0, 180);
+                    vectRot += transform.rotation.eulerAngles;
+                    rot = Quaternion.Euler(vectRot);
+                    currentWeapon.Attack(damage, transform.position + transform.forward.normalized * 1.2f + Vector3.up * 0.8f, rot, 12);
+                    break;
+                case 2:
+                    Shake.instance.shake = 0.09f;
+                    Shake.instance.shakeAmount = 0.09f;
+                    vectRot = new Vector3(0, 0, 20);
+                    vectRot += transform.rotation.eulerAngles;
+                    rot = Quaternion.Euler(vectRot);
+                    currentWeapon.Attack(damage, transform.position + transform.forward.normalized * 1.2f + Vector3.up, rot, 12);
+                    break;
+            }
+
+            OnAttack(_slashCounter);
         }
-            
-            
     }
 
-    public void Attack1()
-    {
-        _slashCounter = 1;
-        combotime = comboSlashTimer;
-        Vector3 vectRot;
-        Quaternion rot;
-        Shake.instance.shake = 0.06f;
-        Shake.instance.shakeAmount = 0.06f;
-        vectRot = new Vector3(0, 0, 30);
-        vectRot += transform.rotation.eulerAngles;
-        rot = Quaternion.Euler(vectRot);
-        currentWeapon.Attack(damage, transform.position + transform.forward.normalized / 1.2f + Vector3.up / 2, rot, 12);
-        StartCoroutine(ToIdle());
-    }
-
-    public void Attack2()
-    {
-        _slashCounter = 2;
-        combotime = comboSlashTimer;
-        Vector3 vectRot;
-        Quaternion rot;
-        Shake.instance.shake = 0.07f;
-        Shake.instance.shakeAmount = 0.07f;
-        vectRot = new Vector3(0, 0, 180);
-        vectRot += transform.rotation.eulerAngles;
-        rot = Quaternion.Euler(vectRot);
-        currentWeapon.Attack(damage, transform.position + transform.forward.normalized * 1.2f + Vector3.up * 0.8f, rot, 12);
-        StartCoroutine(ToIdle());
-    }
-
-    public void Attack3()
-    {
-        _slashCounter = 0;
-        combotime = comboSlashTimer;
-        Vector3 vectRot;
-        Quaternion rot;
-        Shake.instance.shake = 0.09f;
-        Shake.instance.shakeAmount = 0.09f;
-        vectRot = new Vector3(0, 0, 20);
-        vectRot += transform.rotation.eulerAngles;
-        rot = Quaternion.Euler(vectRot);
-        currentWeapon.Attack(damage, transform.position + transform.forward.normalized * 1.2f + Vector3.up, rot, 12);
-        StartCoroutine(ToIdle());
-    }
-    /*
     void ComboTimerUpdate()
     {
         if (_nextSlash)
@@ -456,15 +421,9 @@ public class PlayerModel : MonoBehaviour, IDamageable
         }else if(_slashCounter > 0)
         {
             _slashCounter = 0;
-            //StartCoroutine(ToIdle());
+            StartCoroutine(ToIdle());
         }
         
-    }*/
-
-    private void CombosTimer()
-    {
-        if (combotime > 0) combotime -= Time.deltaTime;
-        else _slashCounter = 0;
     }
 
     public void StartSpecial()
@@ -472,7 +431,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
         if(currentWeapon.hasSpecialAttack && currentWeapon.allowAttack)
         {
             _isCharging = true;
-            canMove = false;
+            _canMove = false;
             OnIdle(false);//praticula
             chargeValue -= 0.02f;
             currentWeapon.StartSpecialAttack(str);
@@ -490,7 +449,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
         {
             _isCharging = false;
             chargeValue = 1;
-            canMove = true;
+            _canMove = true;
             OnSpecial();
             SpecialAttack();
         }
@@ -499,13 +458,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
     IEnumerator ToIdle()
     {
         yield return new WaitForSeconds(0.1f);
-        _isAttacking = false;
         OnIdle(true);
-    }
-
-    public void ToIdle2()
-    {
-        OnIdle(false);
     }
 
     public void SpecialAttack()
@@ -647,7 +600,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
         {
             _canDash = false;
             _canJump = false;
-            canMove = false;
+            _canMove = false;
 
             Shake.instance.shake = 0.3f;
             Shake.instance.shakeAmount = 0.7f;
@@ -669,7 +622,7 @@ public class PlayerModel : MonoBehaviour, IDamageable
         }
         _canDash = true;
         _canJump = true;
-        canMove = true;
+        _canMove = true;
     }
 
 }

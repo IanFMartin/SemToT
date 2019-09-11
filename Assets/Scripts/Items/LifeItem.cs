@@ -10,8 +10,8 @@ public class LifeItem : Item
     public override void MyActionLoot(Transform t)
     {
         Instantiate(lifeParticle, t.position, t.rotation);
-        t.GetComponent<PlayerModel>().TakeDamage(-lifeRestore, false);
-        t.GetComponent<PlayerModel>().PlayHealingParticule();
+        t.GetComponent<PlayerLife>().TakeDamage(-lifeRestore, false);
+        t.GetComponent<PlayerLife>().PlayHealingParticule();
         Destroy(this.gameObject);
     }
 }

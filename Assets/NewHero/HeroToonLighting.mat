@@ -50,6 +50,6 @@ Material:
     - _SpecularTiling: 0
     - __dirty: 1
     m_Colors:
-    - _OutlineTint: {r: 1, g: 0.7971698, b: 0.7971698, a: 0}
-    - _RampTint: {r: 1, g: 1, b: 1, a: 0}
+    - _OutlineTint: {r: 1, g: 0.79607844, b: 0.83627874, a: 0}
+    - _RampTint: {r: 0, g: 0.14847445, b: 1, a: 0}
     - _RimTint: {r: 1, g: 1, b: 1, a: 0}
