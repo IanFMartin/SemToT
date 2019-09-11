@@ -33,7 +33,7 @@ public class MobSpawner : MonoBehaviour
         for (int i = 0; i < enemyPerRoom; i++)
         {
             var tempEnemy = Instantiate(typeOfEnemyInTheRoom[Random.Range(0, typeOfEnemyInTheRoom.Count)],
-                         new Vector3(Random.Range(startPosX.position.x, endPosX.position.x), 1, Random.Range(startPosZ.position.z, endPosZ.position.z)),
+                         new Vector3(Random.Range(startPosX.position.x, endPosX.position.x), 1.5f, Random.Range(startPosZ.position.z, endPosZ.position.z)),
                          Quaternion.identity);
             tempEnemy.transform.parent = this.transform;
             tempEnemy.OnDeath += GetWeapon;

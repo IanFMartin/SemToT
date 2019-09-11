@@ -93,8 +93,6 @@ public class Suicider : Enemy
             {
                 Rigidbody colliderRb = hit.GetComponent<Rigidbody>();
 
-                if (colliderRb == null) continue;
-
                 if (colliderRb != null && hit.gameObject.layer == 10)
                 {
                     colliderRb.AddExplosionForce(explosionPower, transform.position, explosionRadius);
@@ -162,10 +160,4 @@ public class Suicider : Enemy
     }
 
     public enum OnConditionSuicider { IDLE, CHASE, EXPLODE, DIE};
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, explosionRadius);
-    }
 }
