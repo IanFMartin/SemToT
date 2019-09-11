@@ -2778,215 +2778,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed53759ac569b684592ada637935d2ed, type: 3}
---- !u!1001 &107563911
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1462357663}
-    m_Modifications:
-    - target: {fileID: 7763246990485883216, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_Name
-      value: Dialogue 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178990457553455999, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 250048085}
-    - target: {fileID: 8178990457553455999, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextSentence
-      objectReference: {fileID: 0}
-    - target: {fileID: 4866995162443344024, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_Text
-      value: "\xBFPor que?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4086286619696962693, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 250048085}
-    - target: {fileID: 4086286619696962693, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextSentence
-      objectReference: {fileID: 0}
-    - target: {fileID: 190349406142881909, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_Text
-      value: es mucho pedir que no sean fuertes, no?
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3b252bcc6a6154443af0aece75011d04, type: 3}
---- !u!224 &107563912 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2870986348331983163, guid: 3b252bcc6a6154443af0aece75011d04,
-    type: 3}
-  m_PrefabInstance: {fileID: 107563911}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &107563913 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3234747761468331629, guid: 3b252bcc6a6154443af0aece75011d04,
-    type: 3}
-  m_PrefabInstance: {fileID: 107563911}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &107563914 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4086286619696962693, guid: 3b252bcc6a6154443af0aece75011d04,
-    type: 3}
-  m_PrefabInstance: {fileID: 107563911}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &107563915 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8178990457553455999, guid: 3b252bcc6a6154443af0aece75011d04,
-    type: 3}
-  m_PrefabInstance: {fileID: 107563911}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &107563916 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1587598958729658490, guid: 3b252bcc6a6154443af0aece75011d04,
-    type: 3}
-  m_PrefabInstance: {fileID: 107563911}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &107563917 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-    type: 3}
-  m_PrefabInstance: {fileID: 107563911}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &110017603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5847,6 +5638,7 @@ Transform:
   m_Father: {fileID: 106378384}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &250048083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6004,6 +5796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b3b43c96b442c5428888136d3311479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!1001 &250320333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14864,12 +14658,6 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 719572576}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &719572578 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5873639658134048764, guid: 8056e972a81085544a65985243e317e0,
-    type: 3}
-  m_PrefabInstance: {fileID: 719572576}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &721401560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20589,85 +20377,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1066124146}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1067254905
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1067254906}
-  - component: {fileID: 1067254908}
-  - component: {fileID: 1067254907}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1067254906
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067254905}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1369678510}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1067254907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067254905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: y te fuiste de nuevo...
---- !u!222 &1067254908
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067254905}
-  m_CullTransparentMesh: 0
 --- !u!1001 &1069160351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23495,6 +23204,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1216852406}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &1221986180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23592,6 +23302,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1221986180}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!1001 &1225569946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26431,135 +26143,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1368675245}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1369678506
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1369678510}
-  - component: {fileID: 1369678509}
-  - component: {fileID: 1369678508}
-  - component: {fileID: 1369678507}
-  m_Layer: 5
-  m_Name: NaviButton 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1369678507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369678506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.85882354}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_PressedColor: {r: 0.3571163, g: 0.34478462, b: 0.49056602, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1369678508}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 250048085}
-        m_MethodName: StopTalking
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1369678508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369678506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bf50659b26c9edf439640342bb4ec6ed, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &1369678509
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369678506}
-  m_CullTransparentMesh: 0
---- !u!224 &1369678510
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369678506}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99998057, y: 0.99998057, z: 0.99998057}
-  m_Children:
-  - {fileID: 1067254906}
-  m_Father: {fileID: 107563912}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 445.39996, y: -59.99994}
-  m_SizeDelta: {x: 217.2, y: 62}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1369776633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4539754489843051174, guid: ed53759ac569b684592ada637935d2ed,
@@ -28284,6 +27867,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1461515451}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1462357662
 GameObject:
   m_ObjectHideFlags: 0
@@ -28317,6 +27901,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!1001 &1462809071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29759,7 +29345,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 719572576}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719572578}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 773912e4b70188743b65794a1fd1ab85, type: 3}
@@ -38579,7 +38165,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 719572576}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719572578}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a200f5de8fb41e4b881c40b77128ed0, type: 3}
@@ -41131,6 +40717,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 391454174}
     m_Modifications:
+    - target: {fileID: 3780702818825939234, guid: 919d57271dd41964daef647eeb6101c3,
+        type: 3}
+      propertyPath: m_Name
+      value: Slash place holder
+      objectReference: {fileID: 0}
     - target: {fileID: 205134620580862559, guid: 919d57271dd41964daef647eeb6101c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41185,11 +40776,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3780702818825939234, guid: 919d57271dd41964daef647eeb6101c3,
-        type: 3}
-      propertyPath: m_Name
-      value: Slash place holder
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 919d57271dd41964daef647eeb6101c3, type: 3}
@@ -41703,6 +41289,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerLife
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 1697990241}
     - target: {fileID: 7303017758972388966, guid: 9b91f92ae8a3b7941b5fc3874978028e,
         type: 3}
@@ -41714,6 +41301,9 @@ PrefabInstance:
       propertyPath: fN
       value: 
       objectReference: {fileID: 250048085}
+=======
+      objectReference: {fileID: 2021053315}
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
     - target: {fileID: 7303017758972388965, guid: 9b91f92ae8a3b7941b5fc3874978028e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41800,21 +41390,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8586795565730391593, guid: c7f7abc2d42f6de4c8e95e9b2a22b5f0,
-        type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586795565730391593, guid: c7f7abc2d42f6de4c8e95e9b2a22b5f0,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586795565730391593, guid: c7f7abc2d42f6de4c8e95e9b2a22b5f0,
-        type: 3}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 8586795565730391595, guid: c7f7abc2d42f6de4c8e95e9b2a22b5f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41869,6 +41444,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586795565730391593, guid: c7f7abc2d42f6de4c8e95e9b2a22b5f0,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586795565730391593, guid: c7f7abc2d42f6de4c8e95e9b2a22b5f0,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586795565730391593, guid: c7f7abc2d42f6de4c8e95e9b2a22b5f0,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8586795565218475635, guid: c7f7abc2d42f6de4c8e95e9b2a22b5f0,
         type: 3}

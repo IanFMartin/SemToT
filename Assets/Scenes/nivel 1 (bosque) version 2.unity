@@ -393,7 +393,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 41250862cb438914e8169c21e48d9534, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 75bdbc30088f4fa49b415f1a64c672e0, type: 2}
 --- !u!1 &12356157
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,12 +837,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8295573897925695047, guid: 4b00e5b51332e9c439960aa8527e2709,
     type: 3}
   m_PrefabInstance: {fileID: 20028421}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &21991217 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5873639658134048764, guid: 8056e972a81085544a65985243e317e0,
-    type: 3}
-  m_PrefabInstance: {fileID: 719572576}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &23120931
 PrefabInstance:
@@ -2573,160 +2567,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed53759ac569b684592ada637935d2ed, type: 3}
---- !u!1001 &66078522
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1579957961}
-    m_Modifications:
-    - target: {fileID: 7763246990485883216, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_Name
-      value: Dialogue 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5108394913128712062, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178990457553455999, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 335426629}
-    - target: {fileID: 8178990457553455999, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextSentence
-      objectReference: {fileID: 0}
-    - target: {fileID: 4866995162443344024, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_Text
-      value: 'Necesito mas informacion. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 4086286619696962693, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 335426629}
-    - target: {fileID: 4086286619696962693, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StopTalking
-      objectReference: {fileID: 0}
-    - target: {fileID: 190349406142881909, guid: 3b252bcc6a6154443af0aece75011d04,
-        type: 3}
-      propertyPath: m_Text
-      value: "\xA1No te vayas de nuevo! "
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3b252bcc6a6154443af0aece75011d04, type: 3}
 --- !u!1001 &66146708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2912,12 +2752,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4539754489843051174, guid: ed53759ac569b684592ada637935d2ed,
     type: 3}
   m_PrefabInstance: {fileID: 72551323}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &73325518 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400066, guid: f3dd9010cfc3166469e1e23e53f8e01b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8525334899172062757}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &73939781 stripped
 MonoBehaviour:
@@ -8217,18 +8051,6 @@ Transform:
   m_Father: {fileID: 106378384}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &248838308 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4086286619696962693, guid: 3b252bcc6a6154443af0aece75011d04,
-    type: 3}
-  m_PrefabInstance: {fileID: 66078522}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &252377589
 GameObject:
   m_ObjectHideFlags: 0
@@ -8308,12 +8130,15 @@ Transform:
   m_Father: {fileID: 491942677}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!4 &252445088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3877819826918424996, guid: e2bb385f801c87740999a843d6576da8,
     type: 3}
   m_PrefabInstance: {fileID: 8878404576129643013}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!1001 &252887382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9178,12 +9003,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8295573897925695047, guid: 4b00e5b51332e9c439960aa8527e2709,
     type: 3}
   m_PrefabInstance: {fileID: 1573514652}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &285059797 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: f3dd9010cfc3166469e1e23e53f8e01b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8525334899172062757}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &289999903
 PrefabInstance:
@@ -10795,24 +10614,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5440246879653289230, guid: 6990945225063f24dac4440048ea51dc,
     type: 3}
   m_PrefabInstance: {fileID: 1349434409}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &335426629 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5422019853413272487, guid: 156e1f65936581741990d3d11d21d1ac,
-    type: 3}
-  m_PrefabInstance: {fileID: 1978421208}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3b43c96b442c5428888136d3311479, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &335426632 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5422019853413272486, guid: 156e1f65936581741990d3d11d21d1ac,
-    type: 3}
-  m_PrefabInstance: {fileID: 1978421208}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &340708345
 PrefabInstance:
@@ -15955,7 +15756,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: pb_Mesh24756
+=======
+  m_Name: pb_Mesh1025980
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -16709,18 +16514,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b00e5b51332e9c439960aa8527e2709, type: 3}
---- !u!223 &512110520 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 411453729233564570, guid: c05d03a02bdacff41bb258ff7c15d32a,
-    type: 3}
-  m_PrefabInstance: {fileID: 5741334093573293366}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &512110525 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7103450651101482740, guid: c05d03a02bdacff41bb258ff7c15d32a,
-    type: 3}
-  m_PrefabInstance: {fileID: 5741334093573293366}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &513450781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23472,12 +23265,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b00e5b51332e9c439960aa8527e2709, type: 3}
---- !u!4 &730325023 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400066, guid: f3dd9010cfc3166469e1e23e53f8e01b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1130727645582079250}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &731370313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4539754489843051174, guid: ed53759ac569b684592ada637935d2ed,
@@ -27790,18 +27577,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 863922870}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &872677773 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1587598958729658490, guid: 3b252bcc6a6154443af0aece75011d04,
-    type: 3}
-  m_PrefabInstance: {fileID: 66078522}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &872791347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31060,6 +30835,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1200820412}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &970478400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31139,6 +30915,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a128e404a74bd64a9bfdade06a56465, type: 3}
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!4 &971165775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4539754489843051174, guid: ed53759ac569b684592ada637935d2ed,
@@ -36356,18 +36134,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b00e5b51332e9c439960aa8527e2709, type: 3}
---- !u!114 &1134887131 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8178990457553455999, guid: 3b252bcc6a6154443af0aece75011d04,
-    type: 3}
-  m_PrefabInstance: {fileID: 66078522}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1135682923 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4539754489843051174, guid: ed53759ac569b684592ada637935d2ed,
@@ -37462,12 +37228,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1176770794}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1178836203 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400132, guid: dba8fb1766c6d6144abc0642eb752ade,
-    type: 3}
-  m_PrefabInstance: {fileID: 1221721037890064286}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1179998130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38227,24 +37987,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed53759ac569b684592ada637935d2ed, type: 3}
---- !u!114 &1201884980 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3357682262292721143, guid: 7a128e404a74bd64a9bfdade06a56465,
-    type: 3}
-  m_PrefabInstance: {fileID: 970478400}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afaffe0a7a21a2547b4a75343d7a6fa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1201884981 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3357682262292721142, guid: 7a128e404a74bd64a9bfdade06a56465,
-    type: 3}
-  m_PrefabInstance: {fileID: 970478400}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1202481306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41601,18 +41343,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1519774113}
   m_PrefabAsset: {fileID: 0}
---- !u!223 &1333752836 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 411453729233564570, guid: c05d03a02bdacff41bb258ff7c15d32a,
-    type: 3}
-  m_PrefabInstance: {fileID: 3912613046639429121}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1333752841 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7103450651101482740, guid: c05d03a02bdacff41bb258ff7c15d32a,
-    type: 3}
-  m_PrefabInstance: {fileID: 3912613046639429121}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1336656013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8295573897925695047, guid: 4b00e5b51332e9c439960aa8527e2709,
@@ -42194,12 +41924,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4539754489843051174, guid: ed53759ac569b684592ada637935d2ed,
     type: 3}
   m_PrefabInstance: {fileID: 1637131028}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1347407290 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400132, guid: dba8fb1766c6d6144abc0642eb752ade,
-    type: 3}
-  m_PrefabInstance: {fileID: 7572056110183025833}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1348514065
 GameObject:
@@ -46865,12 +46589,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1670988208}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!4 &1463691055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3877819826918424996, guid: e2bb385f801c87740999a843d6576da8,
     type: 3}
   m_PrefabInstance: {fileID: 204731033808990514}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!4 &1463724671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2588317275612795859, guid: 4505aa815457a1c4e841da8a27cc3bd1,
@@ -48344,18 +48071,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4505aa815457a1c4e841da8a27cc3bd1, type: 3}
---- !u!114 &1517467035 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3234747761468331629, guid: 3b252bcc6a6154443af0aece75011d04,
-    type: 3}
-  m_PrefabInstance: {fileID: 66078522}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1517816825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49555,7 +49270,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 719572576}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21991217}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 773912e4b70188743b65794a1fd1ab85, type: 3}
@@ -50097,6 +49812,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1577566511}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1579957960
 GameObject:
   m_ObjectHideFlags: 0
@@ -50130,6 +49846,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!1001 &1585950511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59361,12 +59079,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4505aa815457a1c4e841da8a27cc3bd1, type: 3}
---- !u!4 &1894368211 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: f3dd9010cfc3166469e1e23e53f8e01b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1130727645582079250}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1895843141
 GameObject:
   m_ObjectHideFlags: 0
@@ -62215,6 +61927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0930fafc94ae44641af02023972fc08f, type: 3}
+<<<<<<< HEAD
 --- !u!1001 &1978421208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62344,6 +62057,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156e1f65936581741990d3d11d21d1ac, type: 3}
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!1 &1985364369
 GameObject:
   m_ObjectHideFlags: 0
@@ -64517,6 +64232,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1844738420}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &2021053315 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4946849322010947324, guid: 8056e972a81085544a65985243e317e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 719572576}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a200f5de8fb41e4b881c40b77128ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!1001 &2022667688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67742,12 +67472,6 @@ Transform:
   m_Father: {fileID: 491942677}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &2128182939 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7853852683495527166, guid: 3b252bcc6a6154443af0aece75011d04,
-    type: 3}
-  m_PrefabInstance: {fileID: 66078522}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2141407601
 GameObject:
   m_ObjectHideFlags: 0
@@ -68043,6 +67767,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2146633913}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!65 &77298594018095683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68172,6 +67897,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!1001 &832234488093687259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68192,7 +67919,7 @@ PrefabInstance:
     - target: {fileID: 832234489631329802, guid: 2c3b04ca87994fe4581819856e7c653d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 832234488004770063, guid: 2c3b04ca87994fe4581819856e7c653d,
         type: 3}
@@ -68611,6 +68338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd83fbf20093d443b7d18f260123b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!1001 &1130727645582079250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68784,6 +68512,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!1001 &1626126872521700762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68880,6 +68610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14e13e13306f8194e930ae875e9b7e75, type: 3}
+<<<<<<< HEAD
 --- !u!4 &1941008939229455551
 Transform:
   m_ObjectHideFlags: 0
@@ -69380,6 +69111,8 @@ MonoBehaviour:
   maxPrepTime: 1
   AnticipationTime: 0
   prepParticule: {fileID: 0}
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!114 &4585148831493788769 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3759670378513508794, guid: 2c3b04ca87994fe4581819856e7c653d,
@@ -69392,6 +69125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11df351dfdbe5f74faa692bf08e9547c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!1 &4613941906849648596
 GameObject:
   m_ObjectHideFlags: 0
@@ -69626,6 +69360,8 @@ CapsuleCollider:
   m_Height: 2.0498452
   m_Direction: 1
   m_Center: {x: -0.008392334, y: -0.02492261, z: -0.037254333}
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
 --- !u!1001 &6086110475230936291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69700,105 +69436,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37d71afe4e1928a449bd9f97aeba085e, type: 3}
---- !u!23 &6471715246154992912
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4613941906849648596}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 1435a5742b9ca924995f0ef51c3c896e, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!54 &6534262584123782312
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4172927627805969635}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 5
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
---- !u!95 &6574122469218779572
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4613941906849648596}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: f3dd9010cfc3166469e1e23e53f8e01b, type: 3}
-  m_Controller: {fileID: 9100000, guid: 91e6dfff319b1164383eb3f349cac857, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6634928555496142170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9101379729852790160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f841fce2afc7441b8ea75aed49130c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 80
-  originalDmg: 0
-  TopSpecialDamage: 0
-  specialDamage: 0
-  rateOfFire: 0.3
-  allowAttack: 0
-  dropped: 0
-  hasSpecialAttack: 0
-  iD: 0
-  trail: {fileID: 0}
-  normalClip: {fileID: 8300000, guid: 35d43f4f3777486499cc4de77890deb6, type: 3}
-  specialClip: {fileID: 8300000, guid: 73c79921c8d7fcb4798d8d19d97e8a3d, type: 3}
-  slashEffect: {fileID: 4214520874527151601, guid: fd842f2d1756d3f47b36694bc5ec8425,
-    type: 3}
-  specialEffect: {fileID: 0}
 --- !u!114 &6925108917445850187 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7752486085016996240, guid: 2c3b04ca87994fe4581819856e7c653d,
@@ -69811,20 +69448,6 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &7137903588548224904
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553850957144192679}
-  m_LocalRotation: {x: -0.85696876, y: -0.46817234, z: 0.18870272, w: 0.10397397}
-  m_LocalPosition: {x: 5.557631, y: -1.2829494, z: -5.2922826}
-  m_LocalScale: {x: 0.87983805, y: 19.055304, z: 1.0202858}
-  m_Children: []
-  m_Father: {fileID: 730325023}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 12.660001, y: -267.75598, z: 74.434006}
 --- !u!1001 &7303017757884979595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69846,6 +69469,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerLife
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 1514604546}
     - target: {fileID: 7303017758972388966, guid: 9b91f92ae8a3b7941b5fc3874978028e,
         type: 3}
@@ -69857,6 +69481,9 @@ PrefabInstance:
       propertyPath: ActualLevel
       value: 1
       objectReference: {fileID: 0}
+=======
+      objectReference: {fileID: 2021053315}
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
     - target: {fileID: 7303017758972388965, guid: 9b91f92ae8a3b7941b5fc3874978028e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -69926,6 +69553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b91f92ae8a3b7941b5fc3874978028e, type: 3}
+<<<<<<< HEAD
 --- !u!195 &7364255623353153733
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -70346,3 +69974,5 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+=======
+>>>>>>> parent of 263ccf4... charger y suicide en el bosque
